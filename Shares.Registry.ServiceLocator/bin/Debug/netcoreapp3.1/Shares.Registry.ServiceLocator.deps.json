@@ -1,0 +1,101 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Shares.Registry.ServiceLocator/1.0.0": {
+        "dependencies": {
+          "Shares.Registry.Mvvm.Orchestration": "1.0.0"
+        },
+        "runtime": {
+          "Shares.Registry.ServiceLocator.dll": {}
+        }
+      },
+      "Shares.Registry.Abstractions/1.0.0": {
+        "runtime": {
+          "Shares.Registry.Abstractions.dll": {}
+        }
+      },
+      "Shares.Registry.Constants/1.0.0": {
+        "runtime": {
+          "Shares.Registry.Constants.dll": {}
+        }
+      },
+      "Shares.Registry.Mvvm.Models/1.0.0": {
+        "dependencies": {
+          "Shares.Registry.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "Shares.Registry.Mvvm.Models.dll": {}
+        }
+      },
+      "Shares.Registry.Mvvm.Orchestration/1.0.0": {
+        "dependencies": {
+          "Shares.Registry.Mvvm.ViewModels": "1.0.0"
+        },
+        "runtime": {
+          "Shares.Registry.Mvvm.Orchestration.dll": {}
+        }
+      },
+      "Shares.Registry.Mvvm.ViewModels/1.0.0": {
+        "dependencies": {
+          "Shares.Registry.Abstractions": "1.0.0",
+          "Shares.Registry.Constants": "1.0.0",
+          "Shares.Registry.Mvvm.Models": "1.0.0",
+          "Shares.Registry.Mvvm.Views": "1.0.0"
+        },
+        "runtime": {
+          "Shares.Registry.Mvvm.ViewModels.dll": {}
+        }
+      },
+      "Shares.Registry.Mvvm.Views/1.0.0": {
+        "dependencies": {
+          "Shares.Registry.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "Shares.Registry.Mvvm.Views.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Shares.Registry.ServiceLocator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shares.Registry.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shares.Registry.Constants/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shares.Registry.Mvvm.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shares.Registry.Mvvm.Orchestration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shares.Registry.Mvvm.ViewModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shares.Registry.Mvvm.Views/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

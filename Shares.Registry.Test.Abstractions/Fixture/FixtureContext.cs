@@ -1,0 +1,24 @@
+﻿using Shares.Registry.Test.Abstractions.Mock;
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+using Xunit;
+
+namespace Shares.Registry.Test.XUnit.Mvvm.Fixture
+{
+    public class FixtureContext : IDisposable
+    {
+        public MockManager MockManager;
+        public FixtureContext()  
+        {
+            // Prepare the context for the Class Fixture
+            MockManager = new MockManager();
+        }
+        public void Dispose()
+        {
+            // Clean context
+        }
+    }
+}

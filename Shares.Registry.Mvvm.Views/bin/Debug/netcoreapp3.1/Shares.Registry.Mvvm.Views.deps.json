@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Shares.Registry.Mvvm.Views/1.0.0": {
+        "dependencies": {
+          "Shares.Registry.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "Shares.Registry.Mvvm.Views.dll": {}
+        }
+      },
+      "Shares.Registry.Abstractions/1.0.0": {
+        "runtime": {
+          "Shares.Registry.Abstractions.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Shares.Registry.Mvvm.Views/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shares.Registry.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

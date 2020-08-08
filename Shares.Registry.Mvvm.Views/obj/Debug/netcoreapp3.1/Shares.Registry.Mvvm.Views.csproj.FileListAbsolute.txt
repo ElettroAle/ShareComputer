@@ -1,0 +1,12 @@
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Views\bin\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Views.deps.json
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Views\bin\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Views.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Views\bin\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Views.pdb
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Views\bin\Debug\netcoreapp3.1\Shares.Registry.Abstractions.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Views\bin\Debug\netcoreapp3.1\Shares.Registry.Abstractions.pdb
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Views\obj\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Views.csprojAssemblyReference.cache
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Views\obj\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Views.AssemblyInfoInputs.cache
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Views\obj\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Views.AssemblyInfo.cs
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Views\obj\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Views.csproj.CoreCompileInputs.cache
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Views\obj\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Views.csproj.CopyComplete
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Views\obj\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Views.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Views\obj\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Views.pdb

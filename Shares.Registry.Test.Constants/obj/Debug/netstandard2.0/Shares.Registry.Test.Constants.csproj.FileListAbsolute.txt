@@ -1,0 +1,8 @@
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Constants\obj\Debug\netstandard2.0\Shares.Registry.Test.Constants.AssemblyInfoInputs.cache
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Constants\obj\Debug\netstandard2.0\Shares.Registry.Test.Constants.AssemblyInfo.cs
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Constants\obj\Debug\netstandard2.0\Shares.Registry.Test.Constants.csproj.CoreCompileInputs.cache
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Constants\bin\Debug\netstandard2.0\Shares.Registry.Test.Constants.deps.json
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Constants\bin\Debug\netstandard2.0\Shares.Registry.Test.Constants.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Constants\bin\Debug\netstandard2.0\Shares.Registry.Test.Constants.pdb
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Constants\obj\Debug\netstandard2.0\Shares.Registry.Test.Constants.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Constants\obj\Debug\netstandard2.0\Shares.Registry.Test.Constants.pdb

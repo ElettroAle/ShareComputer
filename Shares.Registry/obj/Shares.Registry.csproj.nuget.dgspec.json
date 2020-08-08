@@ -1,0 +1,570 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry\\Shares.Registry.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Abstractions\\Shares.Registry.Abstractions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Abstractions\\Shares.Registry.Abstractions.csproj",
+        "projectName": "Shares.Registry.Abstractions",
+        "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Abstractions\\Shares.Registry.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\a.fiani\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Abstractions\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\a.fiani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://vetrya.pkgs.visualstudio.com/Wonda/_packaging/TelcoNuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Constants\\Shares.Registry.Constants.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Constants\\Shares.Registry.Constants.csproj",
+        "projectName": "Shares.Registry.Constants",
+        "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Constants\\Shares.Registry.Constants.csproj",
+        "packagesPath": "C:\\Users\\a.fiani\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Constants\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\a.fiani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://vetrya.pkgs.visualstudio.com/Wonda/_packaging/TelcoNuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Models\\Shares.Registry.Mvvm.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Models\\Shares.Registry.Mvvm.Models.csproj",
+        "projectName": "Shares.Registry.Mvvm.Models",
+        "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Models\\Shares.Registry.Mvvm.Models.csproj",
+        "packagesPath": "C:\\Users\\a.fiani\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\a.fiani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://vetrya.pkgs.visualstudio.com/Wonda/_packaging/TelcoNuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Abstractions\\Shares.Registry.Abstractions.csproj": {
+                "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Abstractions\\Shares.Registry.Abstractions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Models\\Shares.Registry.Mvvm.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Models\\Shares.Registry.Mvvm.Models.csproj",
+        "projectName": "Shares.Registry.Mvvm.Models",
+        "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Models\\Shares.Registry.Mvvm.Models.csproj",
+        "packagesPath": "C:\\Users\\a.fiani\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\a.fiani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://vetrya.pkgs.visualstudio.com/Wonda/_packaging/TelcoNuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Abstractions\\Shares.Registry.Abstractions.csproj": {
+                "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Abstractions\\Shares.Registry.Abstractions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Orchestration\\Shares.Registry.Mvvm.Orchestration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Orchestration\\Shares.Registry.Mvvm.Orchestration.csproj",
+        "projectName": "Shares.Registry.Mvvm.Orchestration",
+        "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Orchestration\\Shares.Registry.Mvvm.Orchestration.csproj",
+        "packagesPath": "C:\\Users\\a.fiani\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Orchestration\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\a.fiani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://vetrya.pkgs.visualstudio.com/Wonda/_packaging/TelcoNuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.ViewModels\\Shares.Registry.Mvvm.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.ViewModels\\Shares.Registry.Mvvm.ViewModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.ViewModels\\Shares.Registry.Mvvm.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.ViewModels\\Shares.Registry.Mvvm.ViewModels.csproj",
+        "projectName": "Shares.Registry.Mvvm.ViewModels",
+        "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.ViewModels\\Shares.Registry.Mvvm.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\a.fiani\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.ViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\a.fiani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://vetrya.pkgs.visualstudio.com/Wonda/_packaging/TelcoNuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Abstractions\\Shares.Registry.Abstractions.csproj": {
+                "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Abstractions\\Shares.Registry.Abstractions.csproj"
+              },
+              "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Constants\\Shares.Registry.Constants.csproj": {
+                "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Constants\\Shares.Registry.Constants.csproj"
+              },
+              "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Models\\Shares.Registry.Mvvm.Models.csproj": {
+                "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Models\\Shares.Registry.Mvvm.Models.csproj"
+              },
+              "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Models\\Shares.Registry.Mvvm.Models.csproj": {
+                "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Models\\Shares.Registry.Mvvm.Models.csproj"
+              },
+              "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Views\\Shares.Registry.Mvvm.Views.csproj": {
+                "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Views\\Shares.Registry.Mvvm.Views.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Views\\Shares.Registry.Mvvm.Views.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Views\\Shares.Registry.Mvvm.Views.csproj",
+        "projectName": "Shares.Registry.Mvvm.Views",
+        "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Views\\Shares.Registry.Mvvm.Views.csproj",
+        "packagesPath": "C:\\Users\\a.fiani\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Views\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\a.fiani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://vetrya.pkgs.visualstudio.com/Wonda/_packaging/TelcoNuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Abstractions\\Shares.Registry.Abstractions.csproj": {
+                "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Abstractions\\Shares.Registry.Abstractions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.ServiceLocator\\Shares.Registry.ServiceLocator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.ServiceLocator\\Shares.Registry.ServiceLocator.csproj",
+        "projectName": "Shares.Registry.ServiceLocator",
+        "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.ServiceLocator\\Shares.Registry.ServiceLocator.csproj",
+        "packagesPath": "C:\\Users\\a.fiani\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.ServiceLocator\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\a.fiani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://vetrya.pkgs.visualstudio.com/Wonda/_packaging/TelcoNuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Orchestration\\Shares.Registry.Mvvm.Orchestration.csproj": {
+                "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Orchestration\\Shares.Registry.Mvvm.Orchestration.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry\\Shares.Registry.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry\\Shares.Registry.csproj",
+        "projectName": "Shares.Registry",
+        "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry\\Shares.Registry.csproj",
+        "packagesPath": "C:\\Users\\a.fiani\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\a.fiani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://vetrya.pkgs.visualstudio.com/Wonda/_packaging/TelcoNuget/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.ServiceLocator\\Shares.Registry.ServiceLocator.csproj": {
+                "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.ServiceLocator\\Shares.Registry.ServiceLocator.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
