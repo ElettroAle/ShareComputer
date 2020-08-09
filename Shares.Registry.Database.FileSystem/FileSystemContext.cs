@@ -11,12 +11,8 @@ namespace Shares.Registry.Database.FileSystem
     {
         public FileSystemContext() 
         {
-            // TODO: open connectio to File System
-            // TODO: Fill containers
-            Containers = new List<IContainer>();
+            // TODO: open connection to File System
         }
-
-        public override IEnumerable<IContainer> Containers { get; protected set; }
         public override void Dispose()
         {
             // TODO: close connectio to file System

@@ -10,12 +10,10 @@ namespace Share.Registry.Database.FileSystem.Entities
 {
     public abstract class Entity : IItem
     {
+        public object Key { get; set; }
+        public string ContainerKey { get; set; }
 
-
-        public object Id { get; set; }
-        public string Container { get; set; }
-
-        // TODO: trovare un modo più elegante che non sia la reflection
+        // TODO: find a better way to get secondaty properties
         IEnumerable<PropertyInfo> properties = null;
         public virtual IEnumerable<Property> GetProperties() 
         {

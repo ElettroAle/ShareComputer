@@ -57,8 +57,8 @@ namespace Shares.Registry.Test.Abstractions.Mock
         public Mock<IItem> GetMockItem(bool hasProperties, string containerName = null)
         {
             Mock<IItem> item = new Mock<IItem>();
-            item.SetupGet(x => x.Id).Returns(new object());
-            item.SetupGet(x => x.Container).Returns(containerName ?? new Faker("en").Random.Word());
+            item.SetupGet(x => x.Key).Returns(new object());
+            item.SetupGet(x => x.ContainerKey).Returns(containerName ?? new Faker("en").Random.Word());
             item.Setup(x => x.GetProperties()).Returns(() => !hasProperties ? null : new List<Property>
             {
                 GetRandomProperty(), GetRandomProperty(), GetRandomProperty(), GetRandomProperty()

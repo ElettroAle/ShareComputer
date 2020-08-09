@@ -16,7 +16,7 @@ namespace Shares.Registry.Views.Shares
         {
             foreach (IItem item in Model)
             {
-                Console.WriteLine($"{item.Container}: {item.Id}");
+                Console.WriteLine($"{item.ContainerKey}: {item.Key}");
             }
         }
     }
