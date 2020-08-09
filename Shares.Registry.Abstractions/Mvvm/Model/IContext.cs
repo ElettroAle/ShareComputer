@@ -12,6 +12,6 @@ namespace Shares.Registry.Abstractions.Mvvm.Model
     }
     public static class IContextExtensions
     {
-        public static IContainer GetContainer(this IContext context, string containerName = null) => context.Containers.FirstOrDefault(x => containerName == null || x.Name == containerName);
+        public static IContainer GetContainer(this IContext context, string containerName = null) => context.Containers?.FirstOrDefault(x => containerName == null || x.Name == containerName) ?? null;
     }
 }

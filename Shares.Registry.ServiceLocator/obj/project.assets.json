@@ -11,71 +11,6 @@
         "runtime": {
           "bin/placeholder/Shares.Registry.Abstractions.dll": {}
         }
-      },
-      "Shares.Registry.Constants/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/Shares.Registry.Constants.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Shares.Registry.Constants.dll": {}
-        }
-      },
-      "Shares.Registry.Mvvm.Models/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Shares.Registry.Abstractions": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Shares.Registry.Mvvm.Models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Shares.Registry.Mvvm.Models.dll": {}
-        }
-      },
-      "Shares.Registry.Mvvm.Orchestration/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Shares.Registry.Mvvm.ViewModels": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Shares.Registry.Mvvm.Orchestration.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Shares.Registry.Mvvm.Orchestration.dll": {}
-        }
-      },
-      "Shares.Registry.Mvvm.ViewModels/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Shares.Registry.Abstractions": "1.0.0",
-          "Shares.Registry.Constants": "1.0.0",
-          "Shares.Registry.Mvvm.Models": "1.0.0",
-          "Shares.Registry.Mvvm.Views": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Shares.Registry.Mvvm.ViewModels.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Shares.Registry.Mvvm.ViewModels.dll": {}
-        }
-      },
-      "Shares.Registry.Mvvm.Views/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Shares.Registry.Abstractions": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Shares.Registry.Mvvm.Views.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Shares.Registry.Mvvm.Views.dll": {}
-        }
       }
     }
   },
@@ -84,36 +19,11 @@
       "type": "project",
       "path": "../Shares.Registry.Abstractions/Shares.Registry.Abstractions.csproj",
       "msbuildProject": "../Shares.Registry.Abstractions/Shares.Registry.Abstractions.csproj"
-    },
-    "Shares.Registry.Constants/1.0.0": {
-      "type": "project",
-      "path": "../Shares.Registry.Constants/Shares.Registry.Constants.csproj",
-      "msbuildProject": "../Shares.Registry.Constants/Shares.Registry.Constants.csproj"
-    },
-    "Shares.Registry.Mvvm.Models/1.0.0": {
-      "type": "project",
-      "path": "../Shares.Registry.Mvvm.Models/Shares.Registry.Mvvm.Models.csproj",
-      "msbuildProject": "../Shares.Registry.Mvvm.Models/Shares.Registry.Mvvm.Models.csproj"
-    },
-    "Shares.Registry.Mvvm.Orchestration/1.0.0": {
-      "type": "project",
-      "path": "../Shares.Registry.Mvvm.Orchestration/Shares.Registry.Mvvm.Orchestration.csproj",
-      "msbuildProject": "../Shares.Registry.Mvvm.Orchestration/Shares.Registry.Mvvm.Orchestration.csproj"
-    },
-    "Shares.Registry.Mvvm.ViewModels/1.0.0": {
-      "type": "project",
-      "path": "../Shares.Registry.Mvvm.ViewModels/Shares.Registry.Mvvm.ViewModels.csproj",
-      "msbuildProject": "../Shares.Registry.Mvvm.ViewModels/Shares.Registry.Mvvm.ViewModels.csproj"
-    },
-    "Shares.Registry.Mvvm.Views/1.0.0": {
-      "type": "project",
-      "path": "../Shares.Registry.Mvvm.Views/Shares.Registry.Mvvm.Views.csproj",
-      "msbuildProject": "../Shares.Registry.Mvvm.Views/Shares.Registry.Mvvm.Views.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Shares.Registry.Mvvm.Orchestration >= 1.0.0"
+      "Shares.Registry.Abstractions >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -150,8 +60,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Orchestration\\Shares.Registry.Mvvm.Orchestration.csproj": {
-              "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Mvvm.Orchestration\\Shares.Registry.Mvvm.Orchestration.csproj"
+            "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Abstractions\\Shares.Registry.Abstractions.csproj": {
+              "projectPath": "C:\\Users\\a.fiani\\source\\repos\\Shares.Registry\\Shares.Registry.Abstractions\\Shares.Registry.Abstractions.csproj"
             }
           }
         }

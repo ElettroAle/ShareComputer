@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shares.Registry.Mvvm.Orchestration\Shares.Registry.Mvvm.Orchestration.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Abstractions\Shares.Registry.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

@@ -36,8 +36,10 @@ namespace Shares.Registry.ViewModels.Shares
 #warning Registrare il context con autofac, selezionando li la concretizzazione
                     using (Context)
                     {
-                        IContainer sharesContainer = Context.GetContainer("TestContainer");
-                        IEnumerable<IItem> shares = sharesContainer.DoQuery();
+#warning Sostituire col nome del vero container
+                        IContainer sharesContainer = Context.GetContainer("shares");
+#warning prende le prime 100 shares per ora
+                        IEnumerable<IItem> shares = sharesContainer.Take(1);
                         return new ShareView(shares);
                     }
                 default:

@@ -14,6 +14,14 @@
           "Shares.Registry.Mvvm.Orchestration.dll": {}
         }
       },
+      "Share.Registry.Database.Models/1.0.0": {
+        "dependencies": {
+          "Shares.Registry.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "Share.Registry.Database.Models.dll": {}
+        }
+      },
       "Shares.Registry.Abstractions/1.0.0": {
         "runtime": {
           "Shares.Registry.Abstractions.dll": {}
@@ -24,9 +32,18 @@
           "Shares.Registry.Constants.dll": {}
         }
       },
+      "Shares.Registry.Database.FileSystem/1.0.0": {
+        "dependencies": {
+          "Share.Registry.Database.Models": "1.0.0"
+        },
+        "runtime": {
+          "Shares.Registry.Database.FileSystem.dll": {}
+        }
+      },
       "Shares.Registry.Mvvm.Models/1.0.0": {
         "dependencies": {
-          "Shares.Registry.Abstractions": "1.0.0"
+          "Shares.Registry.Abstractions": "1.0.0",
+          "Shares.Registry.Database.FileSystem": "1.0.0"
         },
         "runtime": {
           "Shares.Registry.Mvvm.Models.dll": {}
@@ -59,12 +76,22 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Share.Registry.Database.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Shares.Registry.Abstractions/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Shares.Registry.Constants/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shares.Registry.Database.FileSystem/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

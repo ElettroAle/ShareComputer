@@ -1,4 +1,5 @@
 ﻿using Shares.Registry.Abstractions.Mvvm.Model;
+using Shares.Registry.Models;
 using Shares.Registry.Test.XUnit.Mvvm.Fixture;
 
 using System;
@@ -15,9 +16,15 @@ namespace Shares.Registry.Test.XUnit.Mvvm.Tests.Model
         public ContextTest(FixtureContext testFixture) : base(testFixture) { }
 
         [Fact]
+        public void GetContextFromFactory() 
+        {
+            Assert.True(DatabaseFactory.GetContext() != null);
+        }
+
+        [Fact]
         public void GetContainers() 
         {
-            var database = MockManager.GetContextMock(true, true).Object;
+            var database = MockManager.GetMockContext(true, "TestContainer").Object;
             Assert.True(database.Containers.Any());
             foreach (string containerName in database.Containers.Select(x => x.Name)) 
             {
@@ -25,10 +32,18 @@ namespace Shares.Registry.Test.XUnit.Mvvm.Tests.Model
             }
         }
         [Fact]
-        public void GetContainersFromEmptyDb()
+        public void GetEmptyContainer()
         {
-            var database = MockManager.GetContextMock(false, true).Object;
-            Assert.False(database.Containers.Any());
+            var database = MockManager.GetMockContext(false, "TestContainers").Object;
+            var container = database.GetContainer();
+            Assert.True(container != null);
+        }
+        [Fact]
+        public void TryGetContainersFromEmptyDbAndWillNot()
+        {
+            var database = MockManager.GetMockContext(false).Object;
+            var container = database.GetContainer();
+            Assert.False(container != null);
         }
     }
 }

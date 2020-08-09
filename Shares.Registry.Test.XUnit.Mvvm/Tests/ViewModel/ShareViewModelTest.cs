@@ -17,14 +17,18 @@ namespace Shares.Registry.Test.XUnit.Mvvm.Tests
         [Fact]
         public void GetView()
         {
-            var viewModel = new ShareViewModel(MockManager.GetContextMock(true, true).Object);
+#warning Sostituire col nome del vero container
+            var viewModel = new ShareViewModel(MockManager.GetMockContext(true, "shares").Object);
             viewModel.GetView("shares");
+            Assert.True(true);
         }
         [Fact]
         public void GetViewNoAction()
         {
-            var viewModel = new ShareViewModel(MockManager.GetContextMock(true, true).Object);
+#warning Sostituire col nome del vero container
+            var viewModel = new ShareViewModel(MockManager.GetMockContext(true, "shares").Object);
             viewModel.GetView("");
+            Assert.True(true);
         }
     }
 }

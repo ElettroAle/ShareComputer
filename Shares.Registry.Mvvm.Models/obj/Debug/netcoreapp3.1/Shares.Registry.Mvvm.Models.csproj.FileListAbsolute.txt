@@ -10,3 +10,7 @@ C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Models\obj\De
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Models\obj\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Models.csproj.CopyComplete
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Models\obj\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Models.dll
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Models\obj\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Models.pdb
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Models\bin\Debug\netcoreapp3.1\Share.Registry.Database.Models.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Models\bin\Debug\netcoreapp3.1\Shares.Registry.Database.FileSystem.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Models\bin\Debug\netcoreapp3.1\Shares.Registry.Database.FileSystem.pdb
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Models\bin\Debug\netcoreapp3.1\Share.Registry.Database.Models.pdb

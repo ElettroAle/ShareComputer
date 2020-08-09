@@ -10,7 +10,9 @@
         "dependencies": {
           "Bogus": "30.0.2",
           "Moq": "4.14.5",
+          "Share.Registry.Database.Models": "1.0.0",
           "Shares.Registry.Abstractions": "1.0.0",
+          "Shares.Registry.Database.FileSystem": "1.0.0",
           "xunit": "2.4.1"
         },
         "runtime": {
@@ -871,9 +873,25 @@
           }
         }
       },
+      "Share.Registry.Database.Models/1.0.0": {
+        "dependencies": {
+          "Shares.Registry.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "Share.Registry.Database.Models.dll": {}
+        }
+      },
       "Shares.Registry.Abstractions/1.0.0": {
         "runtime": {
           "Shares.Registry.Abstractions.dll": {}
+        }
+      },
+      "Shares.Registry.Database.FileSystem/1.0.0": {
+        "dependencies": {
+          "Share.Registry.Database.Models": "1.0.0"
+        },
+        "runtime": {
+          "Shares.Registry.Database.FileSystem.dll": {}
         }
       }
     }
@@ -1521,7 +1539,17 @@
       "path": "xunit.extensibility.execution/2.4.1",
       "hashPath": "xunit.extensibility.execution.2.4.1.nupkg.sha512"
     },
+    "Share.Registry.Database.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Shares.Registry.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shares.Registry.Database.FileSystem/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

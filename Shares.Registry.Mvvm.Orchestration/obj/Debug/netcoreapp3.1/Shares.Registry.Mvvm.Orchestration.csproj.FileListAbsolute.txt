@@ -18,3 +18,7 @@ C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Orchestration
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Orchestration\bin\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Models.pdb
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Orchestration\bin\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Views.pdb
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Orchestration\obj\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Orchestration.csproj.CopyComplete
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Orchestration\bin\Debug\netcoreapp3.1\Share.Registry.Database.Models.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Orchestration\bin\Debug\netcoreapp3.1\Shares.Registry.Database.FileSystem.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Orchestration\bin\Debug\netcoreapp3.1\Share.Registry.Database.Models.pdb
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.Orchestration\bin\Debug\netcoreapp3.1\Shares.Registry.Database.FileSystem.pdb

@@ -13,17 +13,6 @@ namespace Shares.Registry.Test.XUnit.Mvvm.Tests.Model
     {
         public ContainerTest(FixtureContext testFixture) : base(testFixture) { }
 
-        [Fact]
-        public void DoQuery() 
-        {
-            var container = MockManager.GetMockContainer(isEmpty: false).Object;
-            Assert.True(container.DoQuery().Any());
-        }
-        [Fact]
-        public void DoEmptyQuery()
-        {
-            var container = MockManager.GetMockContainer(isEmpty: true).Object;
-            Assert.False(container.DoQuery().Any());
-        }
+        // TODO: test sui singoli container
     }
 }

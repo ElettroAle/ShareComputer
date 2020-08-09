@@ -16,3 +16,7 @@ C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.ViewModels\ob
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.ViewModels\obj\Debug\netcoreapp3.1\Shares.Registry.Mvvm.ViewModels.pdb
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.ViewModels\bin\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Views.dll
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.ViewModels\bin\Debug\netcoreapp3.1\Shares.Registry.Mvvm.Views.pdb
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.ViewModels\bin\Debug\netcoreapp3.1\Share.Registry.Database.Models.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.ViewModels\bin\Debug\netcoreapp3.1\Shares.Registry.Database.FileSystem.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.ViewModels\bin\Debug\netcoreapp3.1\Share.Registry.Database.Models.pdb
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Mvvm.ViewModels\bin\Debug\netcoreapp3.1\Shares.Registry.Database.FileSystem.pdb

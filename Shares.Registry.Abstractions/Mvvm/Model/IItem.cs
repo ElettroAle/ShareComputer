@@ -8,7 +8,7 @@ namespace Shares.Registry.Abstractions.Mvvm.Model
     public interface IItem
     {
         IEnumerable<Property> GetProperties();
-        IContainer Container { get; }
+        string Container { get; }
         object Id { get; }
     }
 }

@@ -13,3 +13,7 @@ C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Abstractions\
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Abstractions\bin\Debug\netcoreapp3.1\Shares.Registry.Abstractions.pdb
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Abstractions\obj\Debug\netcoreapp3.1\Shares.Registry.Test.Abstractions.csproj.CopyComplete
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Abstractions\obj\Debug\netcoreapp3.1\Shares.Registry.Test.Abstractions.csproj.CoreCompileInputs.cache
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Abstractions\bin\Debug\netcoreapp3.1\Share.Registry.Database.Models.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Abstractions\bin\Debug\netcoreapp3.1\Shares.Registry.Database.FileSystem.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Abstractions\bin\Debug\netcoreapp3.1\Share.Registry.Database.Models.pdb
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Test.Abstractions\bin\Debug\netcoreapp3.1\Shares.Registry.Database.FileSystem.pdb

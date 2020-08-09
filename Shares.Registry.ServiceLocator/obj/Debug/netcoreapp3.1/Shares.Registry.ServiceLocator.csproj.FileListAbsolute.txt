@@ -20,3 +20,7 @@ C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.ServiceLocator\obj
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.ServiceLocator\obj\Debug\netcoreapp3.1\Shares.Registry.ServiceLocator.csproj.CopyComplete
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.ServiceLocator\obj\Debug\netcoreapp3.1\Shares.Registry.ServiceLocator.dll
 C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.ServiceLocator\obj\Debug\netcoreapp3.1\Shares.Registry.ServiceLocator.pdb
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.ServiceLocator\bin\Debug\netcoreapp3.1\Share.Registry.Database.Models.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.ServiceLocator\bin\Debug\netcoreapp3.1\Shares.Registry.Database.FileSystem.dll
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.ServiceLocator\bin\Debug\netcoreapp3.1\Share.Registry.Database.Models.pdb
+C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.ServiceLocator\bin\Debug\netcoreapp3.1\Shares.Registry.Database.FileSystem.pdb

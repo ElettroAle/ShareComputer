@@ -18,7 +18,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Shares.Registry.Abstractions\Shares.Registry.Abstractions.csproj" />
-    <ProjectReference Include="..\Shares.Registry.Mvvm.Orchestration\Shares.Registry.Mvvm.Orchestration.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Mvvm.Models\Shares.Registry.Mvvm.Models.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Mvvm.ViewModels\Shares.Registry.Mvvm.ViewModels.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Mvvm.Views\Shares.Registry.Mvvm.Views.csproj" />
     <ProjectReference Include="..\Shares.Registry.Test.Abstractions\Shares.Registry.Test.Abstractions.csproj" />
   </ItemGroup>
 
