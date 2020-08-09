@@ -1,8 +1,0 @@
-C:\Users\a.fiani\source\repos\Shares.Registry\Share.Registry.Database.FileSystem\bin\Debug\netcoreapp3.1\Share.Registry.Database.FileSystem.deps.json
-C:\Users\a.fiani\source\repos\Shares.Registry\Share.Registry.Database.FileSystem\bin\Debug\netcoreapp3.1\Share.Registry.Database.FileSystem.dll
-C:\Users\a.fiani\source\repos\Shares.Registry\Share.Registry.Database.FileSystem\bin\Debug\netcoreapp3.1\Share.Registry.Database.FileSystem.pdb
-C:\Users\a.fiani\source\repos\Shares.Registry\Share.Registry.Database.FileSystem\obj\Debug\netcoreapp3.1\Share.Registry.Database.FileSystem.AssemblyInfoInputs.cache
-C:\Users\a.fiani\source\repos\Shares.Registry\Share.Registry.Database.FileSystem\obj\Debug\netcoreapp3.1\Share.Registry.Database.FileSystem.AssemblyInfo.cs
-C:\Users\a.fiani\source\repos\Shares.Registry\Share.Registry.Database.FileSystem\obj\Debug\netcoreapp3.1\Share.Registry.Database.FileSystem.csproj.CoreCompileInputs.cache
-C:\Users\a.fiani\source\repos\Shares.Registry\Share.Registry.Database.FileSystem\obj\Debug\netcoreapp3.1\Share.Registry.Database.FileSystem.dll
-C:\Users\a.fiani\source\repos\Shares.Registry\Share.Registry.Database.FileSystem\obj\Debug\netcoreapp3.1\Share.Registry.Database.FileSystem.pdb

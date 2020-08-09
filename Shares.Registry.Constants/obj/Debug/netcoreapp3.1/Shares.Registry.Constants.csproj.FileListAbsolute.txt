@@ -1,9 +1,0 @@
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Constants\bin\Debug\netcoreapp3.1\Shares.Registry.Constants.deps.json
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Constants\bin\Debug\netcoreapp3.1\Shares.Registry.Constants.dll
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Constants\bin\Debug\netcoreapp3.1\Shares.Registry.Constants.pdb
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Constants\obj\Debug\netcoreapp3.1\Shares.Registry.Constants.AssemblyInfoInputs.cache
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Constants\obj\Debug\netcoreapp3.1\Shares.Registry.Constants.AssemblyInfo.cs
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Constants\obj\Debug\netcoreapp3.1\Shares.Registry.Constants.csproj.CoreCompileInputs.cache
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Constants\obj\Debug\netcoreapp3.1\Shares.Registry.Constants.dll
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Constants\obj\Debug\netcoreapp3.1\Shares.Registry.Constants.pdb
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Constants\obj\Debug\netcoreapp3.1\Shares.Registry.Constants.csprojAssemblyReference.cache

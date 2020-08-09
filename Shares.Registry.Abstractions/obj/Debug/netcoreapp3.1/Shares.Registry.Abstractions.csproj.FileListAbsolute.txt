@@ -1,9 +1,0 @@
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Abstractions\bin\Debug\netcoreapp3.1\Shares.Registry.Abstractions.deps.json
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Abstractions\bin\Debug\netcoreapp3.1\Shares.Registry.Abstractions.dll
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Abstractions\bin\Debug\netcoreapp3.1\Shares.Registry.Abstractions.pdb
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Abstractions\obj\Debug\netcoreapp3.1\Shares.Registry.Abstractions.AssemblyInfoInputs.cache
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Abstractions\obj\Debug\netcoreapp3.1\Shares.Registry.Abstractions.AssemblyInfo.cs
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Abstractions\obj\Debug\netcoreapp3.1\Shares.Registry.Abstractions.csproj.CoreCompileInputs.cache
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Abstractions\obj\Debug\netcoreapp3.1\Shares.Registry.Abstractions.dll
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Abstractions\obj\Debug\netcoreapp3.1\Shares.Registry.Abstractions.pdb
-C:\Users\a.fiani\source\repos\Shares.Registry\Shares.Registry.Abstractions\obj\Debug\netcoreapp3.1\Shares.Registry.Abstractions.csprojAssemblyReference.cache
