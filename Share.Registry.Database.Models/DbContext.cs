@@ -12,9 +12,9 @@ using System.Text;
 namespace Share.Registry.Database.Models
 {
     /// <summary>
-    /// Class used to design the database shape. Don't care about what type of Database you'll use
+    /// Class used to design the database shape. Don't care about what type of Database you'll use. It will be inject by the constructor unsing the <see cref="IDatabaseClient"/> interface
     /// </summary>
-    public class DbContext : IContext
+    public sealed class DbContext : IContext
     {
         public DbContext(IDatabaseClient client)
         {
@@ -29,6 +29,6 @@ namespace Share.Registry.Database.Models
         private readonly IDatabaseClient client;
         public IDatabaseClient Client => !client.IsOpen ? client.Open() : client;
         public bool IsOpen => client.IsOpen;
-        public virtual void Dispose() => Client.Dispose();
+        public void Dispose() => Client.Dispose();
     }
 }
