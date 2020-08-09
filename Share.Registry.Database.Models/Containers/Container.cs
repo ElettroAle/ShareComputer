@@ -10,9 +10,9 @@ using System.Text;
 namespace Share.Registry.Database.Models.Containers
 {
     /// <summary>
-    /// Models the database container. Is a mix of IQuerable and IEnumerable. Honestly speaking, I don't know if i need it, probably a simple List is enough
+    /// Models the database container. It's a mix of IQuerable and IEnumerable interfaces. Honestly speaking, I don't know if i need it, probably a simple List is enough
     /// </summary>
-    public class Container<TItem> : ICollection<TItem> where TItem : IItem, new()
+    public class Container<TItem> : IContainer where TItem : IItem, new()
     {
         private readonly ICollection<TItem> Items = new List<TItem>();
         private IQueryable<TItem> QuerableItems => Items.AsQueryable();
@@ -32,10 +32,14 @@ namespace Share.Registry.Database.Models.Containers
         public void Add(TItem item) => Items.Add(item);
         public void Add(IItem item) => this.Add(item);
         public bool Remove(TItem item) => Items.Remove(item);
+        public bool Remove(IItem item) => this.Remove(item);
         public void Clear() => Items.Clear();
         public bool Contains(TItem item) => Items.Contains(item);
+        public bool Contains(IItem item) => this.Contains(item);
         public void CopyTo(TItem[] array, int arrayIndex) => Items.CopyTo(array, arrayIndex);
+        public void CopyTo(IItem[] array, int arrayIndex) => this.CopyTo(array, arrayIndex);
         public IEnumerator<TItem> GetEnumerator() => Items.GetEnumerator();
         IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
+        IEnumerator<IItem> IEnumerable<IItem>.GetEnumerator() => (IEnumerator<IItem>)this.GetEnumerator();
     }
 }
