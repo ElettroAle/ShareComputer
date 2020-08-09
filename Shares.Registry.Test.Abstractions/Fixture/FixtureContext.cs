@@ -15,12 +15,10 @@ namespace Shares.Registry.Test.XUnit.Mvvm.Fixture
     public class FixtureContext : IDisposable
     {
         public MockManager MockManager;
-        public ContextFactory ContextFactory;
         public FixtureContext()  
         {
             // Prepare the context for the Class Fixture
             MockManager = new MockManager();
-            ContextFactory = new ContextFactory();
         }
         public void Dispose()
         {

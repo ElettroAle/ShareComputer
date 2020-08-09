@@ -1,5 +1,8 @@
-﻿using Shares.Registry.Abstractions.Mvvm.Model;
-using Shares.Registry.Models;
+﻿using Share.Registry.Database.Models;
+
+using Shares.Registry.Abstractions.Mvvm.Model;
+using Shares.Registry.Mvvm.Models;
+using Shares.Registry.Test.Abstractions.Context;
 using Shares.Registry.Test.XUnit.Mvvm.Fixture;
 
 using System;
@@ -16,17 +19,11 @@ namespace Shares.Registry.Test.XUnit.Mvvm.Tests.Model
         public ContextTest(FixtureContext testFixture) : base(testFixture) { }
 
         [Fact]
-        public void GetContextFromFactory() 
-        {
-            Assert.True(DatabaseFactory.GetContext() != null);
-        }
-
-        [Fact]
-        public void GetContainers() 
+        public void GetContainers()
         {
             var database = MockManager.GetMockContext(true, "TestContainer").Object;
             Assert.True(database.Containers.Any());
-            foreach (string containerName in database.Containers.Select(x => x.Name)) 
+            foreach (string containerName in database.Containers.Select(x => x.Name))
             {
                 Assert.True(database.GetContainer(containerName) != null);
             }
@@ -44,6 +41,32 @@ namespace Shares.Registry.Test.XUnit.Mvvm.Tests.Model
             var database = MockManager.GetMockContext(false).Object;
             var container = database.GetContainer();
             Assert.False(container != null);
+        }
+        [Fact]
+        public void CreateContext()
+        {
+            var context = new DbContext(MockManager.GetMockDatabaseClient().Object);
+            Assert.True(context.Containers.Any());
+            Assert.False(context.IsOpen);
+        }
+        [Fact]
+        public void OpenContext()
+        {
+            var context = new DbContext(MockManager.GetMockDatabaseClient().Object);
+            Assert.False(context.IsOpen);
+        }
+        [Fact]
+        public void DisposeContext()
+        {
+            var context = new DbContext(MockManager.GetMockDatabaseClient().Object);
+            context.Dispose();
+            Assert.False(context.IsOpen);
+        }
+        [Fact]
+        public void GetContextFromFactory()
+        {
+            var context = new ContextFactory().GetContext(MockManager.GetMockDatabaseClient().Object);
+            Assert.True(context != null);
         }
     }
 }

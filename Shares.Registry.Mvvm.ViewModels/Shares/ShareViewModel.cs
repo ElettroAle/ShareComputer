@@ -2,7 +2,6 @@
 using Shares.Registry.Abstractions.Mvvm.View;
 using Shares.Registry.Abstractions.Mvvm.ViewModel;
 using Shares.Registry.Constants;
-using Shares.Registry.Models;
 using Shares.Registry.Mvvm.Views;
 using Shares.Registry.Views.Shares;
 

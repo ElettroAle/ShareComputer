@@ -1,4 +1,6 @@
 ﻿
+using Shares.Registry.Abstractions.Connections;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,7 @@ namespace Shares.Registry.Abstractions.Mvvm.Model
     public interface IContext : IDisposable
     {
         IEnumerable<IContainer> Containers { get; }
+        IDatabaseClient Client { get; }
     }
     public static class IContextExtensions
     {

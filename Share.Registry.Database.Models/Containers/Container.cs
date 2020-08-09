@@ -14,7 +14,10 @@ namespace Share.Registry.Database.Models.Containers
     /// </summary>
     public class Container<TItem> : IContainer where TItem : IItem, new()
     {
-        private readonly ICollection<TItem> Items = new List<TItem>();
+        private ICollection<TItem> items = null;
+        private ICollection<TItem> Items => items ?? (items = 
+            // TODO: a way to Lazy connect
+            new List<TItem>());
         private IQueryable<TItem> QuerableItems => Items.AsQueryable();
         public Container(string name = "")
         {

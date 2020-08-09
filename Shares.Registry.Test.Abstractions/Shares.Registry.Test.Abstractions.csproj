@@ -11,9 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Share.Registry.Database.Models\Share.Registry.Database.Models.csproj" />
+    <ProjectReference Include="..\Share.Registry.Database.Models\Shares.Registry.Database.Models.csproj" />
     <ProjectReference Include="..\Shares.Registry.Abstractions\Shares.Registry.Abstractions.csproj" />
     <ProjectReference Include="..\Shares.Registry.Database.FileSystem\Shares.Registry.Database.FileSystem.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Mvvm.Models\Shares.Registry.Mvvm.Models.csproj" />
   </ItemGroup>
 
 </Project>

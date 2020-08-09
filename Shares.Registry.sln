@@ -29,11 +29,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Test.Abstra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shares.Registry.Database", "Shares.Registry.Database", "{CAB2213B-3FB9-4E76-95B1-E8B2C4577693}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Share.Registry.Database.Models", "Share.Registry.Database.Models\Share.Registry.Database.Models.csproj", "{F3D69C41-3249-4E0F-9C60-19CF7055A013}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Database.Models", "Share.Registry.Database.Models\Shares.Registry.Database.Models.csproj", "{F3D69C41-3249-4E0F-9C60-19CF7055A013}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shares.Registry.Test.XUnit.BusinessLogic", "Shares.Registry.Test.XUnit.BusinessLogic\Shares.Registry.Test.XUnit.BusinessLogic.csproj", "{0B7288E2-A326-47D0-9E8C-7DB39F07A771}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Test.XUnit.BusinessLogic", "Shares.Registry.Test.XUnit.BusinessLogic\Shares.Registry.Test.XUnit.BusinessLogic.csproj", "{0B7288E2-A326-47D0-9E8C-7DB39F07A771}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shares.Registry.Database.FileSystem", "Shares.Registry.Database.FileSystem\Shares.Registry.Database.FileSystem.csproj", "{E79C9A49-4E22-4DBA-A166-D650EAB8B285}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Database.FileSystem", "Shares.Registry.Database.FileSystem\Shares.Registry.Database.FileSystem.csproj", "{E79C9A49-4E22-4DBA-A166-D650EAB8B285}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.ServiceLocator", "Shares.Registry.ServiceLocator\Shares.Registry.ServiceLocator.csproj", "{4DC5FED2-4E7A-46C6-8D5C-12C55B39E818}"
 EndProject
