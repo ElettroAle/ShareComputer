@@ -25,10 +25,19 @@ namespace Share.Registry.Database.Models
             };
             this.client = client;
         }
+        /// <summary>
+        /// The List of containers that models the database
+        /// </summary>
         public IEnumerable<IContainer> Containers { get; }
         private readonly IDatabaseClient client;
+        /// <summary>
+        /// Gets the client. Opens it, if needed.
+        /// </summary>
         public IDatabaseClient Client => !client.IsOpen ? client.Open() : client;
         public bool IsOpen => client.IsOpen;
+        /// <summary>
+        /// Disposes the context and close the client.
+        /// </summary>
         public void Dispose() => Client.Dispose();
     }
 }

@@ -24,9 +24,7 @@ namespace Shares.Registry.Test.XUnit.Mvvm.Tests.Model
             var database = MockManager.GetMockContext(true, "TestContainer").Object;
             Assert.True(database.Containers.Any());
             foreach (string containerName in database.Containers.Select(x => x.Name))
-            {
                 Assert.True(database.GetContainer(containerName) != null);
-            }
         }
         [Fact]
         public void GetEmptyContainer()
@@ -45,15 +43,16 @@ namespace Shares.Registry.Test.XUnit.Mvvm.Tests.Model
         [Fact]
         public void CreateContext()
         {
-            var context = new DbContext(MockManager.GetMockDatabaseClient().Object);
+            using var context = new DbContext(MockManager.GetMockDatabaseClient().Object);
             Assert.True(context.Containers.Any());
             Assert.False(context.IsOpen);
         }
         [Fact]
-        public void OpenContext()
+        public void OpenDbContext()
         {
-            var context = new DbContext(MockManager.GetMockDatabaseClient().Object);
-            Assert.False(context.IsOpen);
+            using var context = new DbContext(MockManager.GetMockDatabaseClient().Object);
+            var _ = context.Client;
+            Assert.True(context.IsOpen);
         }
         [Fact]
         public void DisposeContext()
