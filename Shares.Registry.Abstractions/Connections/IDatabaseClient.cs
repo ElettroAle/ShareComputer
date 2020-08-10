@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Shares.Registry.Abstractions.Connections
 {
-    public interface IDatabaseClient : IDisposable
+    public interface IDatabaseClient
     {
         public IDatabaseClient Open();
         public void Close();

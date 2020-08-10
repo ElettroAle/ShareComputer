@@ -38,6 +38,6 @@ namespace Share.Registry.Database.Models
         /// <summary>
         /// Disposes the context and close the client.
         /// </summary>
-        public void Dispose() => Client.Dispose();
+        public void Dispose() => Client.Close();
     }
 }

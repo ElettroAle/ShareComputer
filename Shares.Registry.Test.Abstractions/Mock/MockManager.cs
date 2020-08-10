@@ -17,8 +17,6 @@ namespace Shares.Registry.Test.Abstractions.Mock
 {
     public class MockManager
     {
-        bool contextIsOpen;
-
 #warning the MockManager is too confusing. I need to build objects in Fixture and flywheight them
         public Mock<IView<object>> GetMockView()
         {
@@ -46,12 +44,13 @@ namespace Shares.Registry.Test.Abstractions.Mock
             mock.SetupGet(x => x.Client).Returns(GetMockDatabaseClient().Object);
             return mock;
         }
+        private bool clientIsOpen = false;
         public Mock<IDatabaseClient> GetMockDatabaseClient() 
         {
             Mock<IDatabaseClient> mock = new Mock<IDatabaseClient>();
-            mock.Setup(x => x.Open()).Callback(() => contextIsOpen = true).Returns(mock.Object);
-            mock.Setup(x => x.Close()).Callback(() => contextIsOpen = false);
-            mock.SetupGet(x => x.IsOpen).Returns(contextIsOpen);
+            mock.Setup(x => x.Open()).Callback(() => { System.Diagnostics.Debug.WriteLine("CONTEXT OPEN"); clientIsOpen = true; }).Returns(mock.Object);
+            mock.Setup(x => x.Close()).Callback(() => { System.Diagnostics.Debug.WriteLine("CONTEXT CLOSE"); clientIsOpen = false; });
+            mock.SetupGet(x => x.IsOpen).Returns(() => clientIsOpen);
             return mock;
         }
         public Mock<IContainer> GetMockContainer(bool isEmpty, string containerName = "TestContainer")
