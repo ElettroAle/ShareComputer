@@ -1,10 +1,5 @@
-﻿using Shares.Registry.Test.Abstractions.Context;
-using Shares.Registry.Test.Abstractions.Mock;
+﻿using Shares.Registry.Test.Abstractions.Mock;
 using Shares.Registry.Test.XUnit.Mvvm.Fixture;
-
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 using Xunit;
 

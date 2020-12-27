@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
-    <PackageReference Include="Moq" Version="4.14.5" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -17,10 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shares.Registry.Abstractions\Shares.Registry.Abstractions.csproj" />
-    <ProjectReference Include="..\Shares.Registry.Mvvm.Models\Shares.Registry.Mvvm.Models.csproj" />
-    <ProjectReference Include="..\Shares.Registry.Mvvm.ViewModels\Shares.Registry.Mvvm.ViewModels.csproj" />
-    <ProjectReference Include="..\Shares.Registry.Mvvm.Views\Shares.Registry.Mvvm.Views.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Abstraction.Database\Shares.Registry.Abstraction.Database.csproj" />
     <ProjectReference Include="..\Shares.Registry.Test.Abstractions\Shares.Registry.Test.Abstractions.csproj" />
   </ItemGroup>
 

@@ -13,6 +13,6 @@ namespace Shares.Registry.Test.XUnit.Mvvm.Tests.Model
     {
         public ContainerTest(FixtureContext testFixture) : base(testFixture) { }
 
-        // TODO: test sui singoli container
+        // TODO: test sui container concreti
     }
 }

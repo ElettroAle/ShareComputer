@@ -1,17 +1,17 @@
 ﻿
-using Shares.Registry.Abstractions.Connections;
+using Shares.Registry.Abstraction.Database.Connections;
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Shares.Registry.Abstractions.Mvvm.Model
+namespace Shares.Registry.Abstraction.Database.Structure
 {
     public interface IContext : IDisposable
     {
         IEnumerable<IContainer> Containers { get; }
-        IDatabaseClient Client { get; }
+        IClient Client { get; }
     }
     public static class IContextExtensions
     {

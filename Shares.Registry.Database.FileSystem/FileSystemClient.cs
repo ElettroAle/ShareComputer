@@ -1,14 +1,13 @@
-﻿using Share.Registry.Database.Models;
-
-using Shares.Registry.Abstractions.Connections;
-using Shares.Registry.Abstractions.Mvvm.Model;
+﻿
+using Shares.Registry.Abstraction.Database.Connections;
 
 using System;
-using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace Shares.Registry.Database.FileSystem
 {
-    public class FileSystemClient : IDatabaseClient
+    public class FileSystemClient : IClient
     {
         public bool IsOpen => throw new NotImplementedException();
 
@@ -17,12 +16,32 @@ namespace Shares.Registry.Database.FileSystem
             throw new NotImplementedException();
         }
 
-        public void Dispose()
+        public IQueryable CreateQuery(Expression expression)
         {
             throw new NotImplementedException();
         }
 
-        public IDatabaseClient Open()
+        public IQueryable<TElement> CreateQuery<TElement>(Expression expression)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object Execute(Expression expression)
+        {
+            throw new NotImplementedException();
+        }
+
+        public TResult Execute<TResult>(Expression expression)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IClient Open()
+        {
+            throw new NotImplementedException();
+        }        
+
+        public void Save()
         {
             throw new NotImplementedException();
         }
