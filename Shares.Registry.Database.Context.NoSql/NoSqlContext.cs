@@ -1,20 +1,19 @@
-﻿
-using Share.Registry.Database.Models.Containers;
+﻿using Share.Registry.Database.Models.Containers;
 
 using Shares.Registry.Abstraction.Database.Connections;
 using Shares.Registry.Abstraction.Database.Structure;
-using Shares.Registry.Mvvm.Models.Entities;
+using Shares.Registry.Layers.DataAccess.Models.Entities;
 
 using System.Collections.Generic;
 
-namespace Share.Registry.Database.Models
+namespace Shares.Registry.DataAccess.Context
 {
     /// <summary>
-    /// Class used to design the database shape. Don't care about what type of Database you'll use. It will be inject by the constructor unsing the <see cref="IDatabaseClient"/> interface
+    /// Class used to design the no-sql database shape. Don't care about what type of client you'll use. It will be inject by the constructor unsing the <see cref="IClient"/> interface
     /// </summary>
-    public sealed class DbContext : IContext
+    public sealed class NoSqlContext : IContext
     {
-        public DbContext(IClient client)
+        public NoSqlContext(IClient client)
         {
             // Containers Initialization
             Containers = new List<IContainer>()

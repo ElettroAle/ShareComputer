@@ -5,7 +5,7 @@ using Shares.Registry.Abstraction.Database.Structure;
 
 using System;
 
-namespace Shares.Registry.Mvvm.Models.Entities
+namespace Shares.Registry.Layers.DataAccess.Models.Entities
 {
     public class TableSharePurchase : Entity, IEntity
     {

@@ -11,8 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Share.Registry.Database.Models\Shares.Registry.DataAccess.Models.csproj" />
-    <ProjectReference Include="..\Shares.Registry.Database.FileSystem\Shares.Registry.DataAccess.FileSystem.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Abstraction.Database\Shares.Registry.Abstraction.Database.csproj" />
   </ItemGroup>
 
 </Project>

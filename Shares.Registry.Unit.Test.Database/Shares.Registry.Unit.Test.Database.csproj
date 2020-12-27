@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Shares.Registry.Abstraction.Database\Shares.Registry.Abstraction.Database.csproj" />
-    <ProjectReference Include="..\Shares.Registry.Test.Abstractions\Shares.Registry.Test.Abstractions.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Abstractions.Unit.Test\Shares.Registry.Abstractions.Unit.Test.csproj" />
   </ItemGroup>
 
 </Project>
