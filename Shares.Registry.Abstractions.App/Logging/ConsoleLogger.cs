@@ -1,13 +1,17 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shares.Registry.EntryPoint.ConsoleApp.Logging
+namespace Shares.Registry.Abstractions.App.Logging
 {
     public class ConsoleLogger : ILogger
     {
+        private readonly IConfiguration configuration;
+        public ConsoleLogger(IConfiguration configuration) => this.configuration = configuration;
+
         public IDisposable BeginScope<TState>(TState state) => null;
         public bool IsEnabled(LogLevel logLevel) => true;
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)

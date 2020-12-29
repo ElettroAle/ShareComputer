@@ -8,15 +8,15 @@ using Shares.Registry.Test.Abstractions.Mock;
 using System;
 using System.Collections.Generic;
 
-namespace Shares.Registry.Test.XUnit.Mvvm.Fixture
+namespace Shares.Registry.Abstractions.Unit.Test.Fixture
 {
     public class FixtureContext : IDisposable
     {
         private DummyItem dummyItem = null;
-        public IEntity GetDummyEntityInstance() => (dummyItem ??= new DummyItem());
+        public IEntity GetDummyEntityInstance() => dummyItem ??= new DummyItem();
         public IEntity GetDummyItemInstanceAndGenerateProperties() => (GetDummyEntityInstance() as DummyItem).GenerateProperties();
         public MockManager MockManager;
-        public FixtureContext()  
+        public FixtureContext()
         {
             // Prepare the context for the Class Fixture
             MockManager = new MockManager();

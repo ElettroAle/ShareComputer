@@ -8,12 +8,14 @@ using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
 
+using IContainer = Shares.Registry.Abstraction.Database.Structure.IContainer;
+
 namespace Share.Registry.Database.Models.Containers
 {
     /// <summary>
     /// Models the database container. It's a mix of IQuerable and IEnumerable interfaces. Honestly speaking, I don't know if i need it, probably a simple List is enough
     /// </summary>
-    public class Container<TItem> : Shares.Registry.Abstraction.Database.Structure.IContainer where TItem : IEntity, new()
+    public class Container<TItem> : IContainer where TItem : IEntity, new()
     {
 
         private IDataReader Reader { get; }

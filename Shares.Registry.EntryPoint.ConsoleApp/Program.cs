@@ -1,6 +1,6 @@
-﻿using Shares.Registry.EntryPoint.ConsoleApp.Builder;
+﻿using Shares.Registry.Abstractions.App.Builder;
+using Shares.Registry.EntryPoint.ConsoleApp.App;
 
-using System;
 using System.Threading.Tasks;
 
 namespace Shares.Registry.ConsoleApp
@@ -8,7 +8,9 @@ namespace Shares.Registry.ConsoleApp
     class Program
     {
         static async Task Main(string[] args)
-            => await new DefaultAppBuilder().ConfigureServiceProvider(args).Build().RunAsync();
-
+            => await new DefaultAppBuilder()
+                .ConfigureServiceProvider(args)
+                .Build<MainApp>()
+                .RunAsync();
     }
 }

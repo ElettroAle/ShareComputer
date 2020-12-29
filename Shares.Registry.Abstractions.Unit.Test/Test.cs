@@ -1,5 +1,5 @@
-﻿using Shares.Registry.Test.Abstractions.Mock;
-using Shares.Registry.Test.XUnit.Mvvm.Fixture;
+﻿using Shares.Registry.Abstractions.Unit.Test.Fixture;
+using Shares.Registry.Test.Abstractions.Mock;
 
 using Xunit;
 

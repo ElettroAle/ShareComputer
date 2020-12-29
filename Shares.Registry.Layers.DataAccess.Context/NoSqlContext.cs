@@ -6,7 +6,7 @@ using Shares.Registry.Layers.DataAccess.Models.Entities;
 
 using System.Collections.Generic;
 
-namespace Shares.Registry.DataAccess.Context
+namespace Shares.Registry.Layers.DataAccess.Context
 {
     /// <summary>
     /// Class used to design the no-sql database shape. Don't care about what type of client you'll use. It will be inject by the constructor unsing the <see cref="IClient"/> interface

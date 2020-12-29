@@ -1,4 +1,4 @@
-﻿using Shares.Registry.Test.XUnit.Mvvm.Fixture;
+﻿using Shares.Registry.Abstractions.Unit.Test.Fixture;
 
 using System;
 using System.Collections.Generic;

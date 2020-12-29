@@ -1,11 +1,11 @@
-﻿using Shares.Registry.Test.XUnit.Mvvm.Fixture;
-
+﻿
 using System;
 using System.Collections.Generic;
 
 using Xunit;
 using System.Linq;
 using Shares.Registry.Abstraction.Database.Structure;
+using Shares.Registry.Abstractions.Unit.Test.Fixture;
 
 namespace Shares.Registry.Test.XUnit.Mvvm.Tests.Model
 {

@@ -9,6 +9,6 @@ namespace Shares.Registry.EntryPoint.ConsoleApp.Runtime
     public interface IAppBuilder
     {
         IAppBuilder ConfigureServiceProvider(string[] args);
-        IApp Build();
+        IApp Build<TApp>() where TApp : class, IApp;
     }
 }
