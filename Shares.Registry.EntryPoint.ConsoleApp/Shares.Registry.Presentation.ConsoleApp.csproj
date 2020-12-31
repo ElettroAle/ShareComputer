@@ -12,7 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shares.Registry.Abstractions.App\Shares.Registry.Abstractions.App.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Abstractions.App\Shares.Registry.Presentation.App.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Abstractions.Business\Shares.Registry.Business.Abstractions.Services.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Business.Providers.Services\Shares.Registry.Business.Providers.Services.csproj" />
   </ItemGroup>
 
 </Project>

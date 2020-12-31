@@ -8,8 +8,8 @@ namespace Share.Registry.Database.FileSystem.Entities
 {
     public abstract class Entity : IEntity
     {
-        public object Key { get; set; }
-        public string ContainerKey { get; set; }
+        public object PrimaryKey { get; set; }
+        public string PartitionKey { get; set; }
 
         // TODO: find a better way to get secondary properties
         IEnumerable<PropertyInfo> properties = null;

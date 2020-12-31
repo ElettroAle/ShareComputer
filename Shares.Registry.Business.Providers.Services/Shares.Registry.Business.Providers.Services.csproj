@@ -1,17 +1,12 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Bogus" Version="30.0.2" />
-    <PackageReference Include="Moq" Version="4.14.5" />
-    <PackageReference Include="xunit" Version="2.4.1" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Shares.Registry.Abstraction.Database\Shares.Registry.Business.Abstractions.Database.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Abstractions.Business\Shares.Registry.Business.Abstractions.Services.csproj" />
   </ItemGroup>
 
 </Project>

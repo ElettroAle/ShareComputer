@@ -7,6 +7,6 @@ namespace Shares.Registry.EntryPoint.ConsoleApp.Abstractions
 {
     public interface IApp
     {
-        Task RunAsync();
+        Task RunAsync(object[] args);
     }
 }

@@ -5,9 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shares.Registry.Abstractions.App.Logging
+namespace Shares.Registry.Presentation.App.Logging
 {
-    public class ConsoleLogger : ILogger
+    internal class ConsoleLogger : ILogger
     {
         private readonly IConfiguration configuration;
         public ConsoleLogger(IConfiguration configuration) => this.configuration = configuration;

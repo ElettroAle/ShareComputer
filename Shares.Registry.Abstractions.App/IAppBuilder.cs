@@ -1,4 +1,6 @@
-﻿using Shares.Registry.EntryPoint.ConsoleApp.Abstractions;
+﻿using Microsoft.Extensions.DependencyInjection;
+
+using Shares.Registry.EntryPoint.ConsoleApp.Abstractions;
 
 using System;
 using System.Collections.Generic;
@@ -8,7 +10,7 @@ namespace Shares.Registry.EntryPoint.ConsoleApp.Runtime
 {
     public interface IAppBuilder
     {
-        IAppBuilder ConfigureServiceProvider(string[] args);
         IApp Build<TApp>() where TApp : class, IApp;
+        public IAppBuilder ConfigureServiceProvider(Func<IServiceCollection, IServiceCollection> func);
     }
 }

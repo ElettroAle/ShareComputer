@@ -2,13 +2,15 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-using Shares.Registry.Abstractions.App.Logging;
 using Shares.Registry.EntryPoint.ConsoleApp.Abstractions;
 using Shares.Registry.EntryPoint.ConsoleApp.Runtime;
+using Shares.Registry.Presentation.App.Logging;
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
-namespace Shares.Registry.Abstractions.App.Builder
+namespace Shares.Registry.Presentation.App.Builder
 {
     public class DefaultAppBuilder : IAppBuilder
     {
@@ -17,11 +19,14 @@ namespace Shares.Registry.Abstractions.App.Builder
                 .AddJsonFile("appsettings.Development.json", optional: false, reloadOnChange: true)
                 .AddEnvironmentVariables()
                 .Build();
-        readonly IServiceCollection serviceCollection = new ServiceCollection();
+        public IServiceCollection ServiceCollection { get; private set; } = new ServiceCollection();
 
         public IApp Build<TApp>() where TApp : class, IApp
         {
-            IServiceProvider serviceProvider = serviceCollection
+            IServiceProvider serviceProvider = ServiceCollection
+                .AddSingleton(x => configuration)
+                .AddLogging()
+                .AddSingleton<ILogger, ConsoleLogger>()
                 .AddSingleton<TApp>()
                 .BuildServiceProvider();
             serviceProvider
@@ -29,12 +34,10 @@ namespace Shares.Registry.Abstractions.App.Builder
                 .LogDebug("Starting Application");
             return serviceProvider.GetService<IApp>();
         }
-        public virtual IAppBuilder ConfigureServiceProvider(string[] args)
+
+        public IAppBuilder ConfigureServiceProvider(Func<IServiceCollection, IServiceCollection> func)
         {
-            serviceCollection
-                .AddSingleton(x => configuration)
-                .AddLogging()
-                .AddSingleton<ILogger, ConsoleLogger>();
+            ServiceCollection = func(ServiceCollection);
             return this;
         }
     }

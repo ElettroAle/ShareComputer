@@ -3,33 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shares.Registry.Abstractions", "Shares.Registry.Abstractions", "{3076C23D-D6C8-4959-97AD-DBCB3FC58F3A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PL", "PL", "{3076C23D-D6C8-4959-97AD-DBCB3FC58F3A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shares.Registry.Unit.Test", "Shares.Registry.Unit.Test", "{DE79198F-2A5A-491D-926B-95266C109C17}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Abstraction.Database", "Shares.Registry.Abstraction.Database\Shares.Registry.Abstraction.Database.csproj", "{649FF06C-3758-40B8-BEF6-C12B6FBB3550}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Business.Abstractions.Database", "Shares.Registry.Abstraction.Database\Shares.Registry.Business.Abstractions.Database.csproj", "{649FF06C-3758-40B8-BEF6-C12B6FBB3550}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Unit.Test.Database", "Shares.Registry.Unit.Test.Database\Shares.Registry.Unit.Test.Database.csproj", "{531EFF60-0AF6-4B28-AAF4-7E83240FAAB5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Abstractions.Unit.Test", "Shares.Registry.Abstractions.Unit.Test\Shares.Registry.Abstractions.Unit.Test.csproj", "{38008B85-6441-453F-975F-5369FCBC4C37}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shares.Registry.Layers", "Shares.Registry.Layers", "{A4336C08-C82A-42E0-BA87-B88D42285A45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.DataAccess.Models", "Shares.Registry.Layers.DataAccess.Models\Shares.Registry.DataAccess.Models.csproj", "{F87ADC6C-0D39-42BB-B210-F9F612917CD7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shares.Registry.Database", "Shares.Registry.Database", "{A806F21D-73B6-47AE-B15A-C87D9F0FC4DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.DataAccess.Clients.FileSystem", "Shares.Registry.Database.Client.FileSystem\Shares.Registry.DataAccess.Clients.FileSystem.csproj", "{1A4E62A2-7FC6-4418-AAFC-7D7E17554F20}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Layers.DataAccess.Models", "Shares.Registry.Layers.DataAccess.Models\Shares.Registry.Layers.DataAccess.Models.csproj", "{F87ADC6C-0D39-42BB-B210-F9F612917CD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Presentation.ConsoleApp", "Shares.Registry.EntryPoint.ConsoleApp\Shares.Registry.Presentation.ConsoleApp.csproj", "{E8673233-DAC7-4607-9901-239F1CD3306E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shares.Registry.EntryPoint", "Shares.Registry.EntryPoint", "{DE23C6CC-F21D-46D7-AE1E-90C8537DEBC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Presentation.App", "Shares.Registry.Abstractions.App\Shares.Registry.Presentation.App.csproj", "{B50C06F8-FC4C-49AA-855F-6DEF9AA7A344}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Database.Client.FileSystem", "Shares.Registry.Database.Client.FileSystem\Shares.Registry.Database.Client.FileSystem.csproj", "{1A4E62A2-7FC6-4418-AAFC-7D7E17554F20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.DataAccess.NoSqlContext", "Shares.Registry.Layers.DataAccess.Context\Shares.Registry.DataAccess.NoSqlContext.csproj", "{009DC292-634B-4C09-934C-B3AFE5EE20DA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.EntryPoint.ConsoleApp", "Shares.Registry.EntryPoint.ConsoleApp\Shares.Registry.EntryPoint.ConsoleApp.csproj", "{E8673233-DAC7-4607-9901-239F1CD3306E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Business.Abstractions.Services", "Shares.Registry.Abstractions.Business\Shares.Registry.Business.Abstractions.Services.csproj", "{F1B203B1-8D38-4C74-A797-1A43B8CA2DE4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Abstractions.App", "Shares.Registry.Abstractions.App\Shares.Registry.Abstractions.App.csproj", "{B50C06F8-FC4C-49AA-855F-6DEF9AA7A344}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{E4D35E45-0BB7-4B18-A657-8525E7C8B8F1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Layers.DataAccess.Context", "Shares.Registry.Layers.DataAccess.Context\Shares.Registry.Layers.DataAccess.Context.csproj", "{009DC292-634B-4C09-934C-B3AFE5EE20DA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{8BDC9875-875B-4307-B5BE-4DE56FB24C9A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Abstractions.Business", "Shares.Registry.Abstractions.Business\Shares.Registry.Abstractions.Business.csproj", "{F1B203B1-8D38-4C74-A797-1A43B8CA2DE4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TEST", "TEST", "{386C46F5-A3C2-46AC-9E99-C43BE601B2EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shares.Registry.Business.Providers.Services", "Shares.Registry.Business.Providers.Services\Shares.Registry.Business.Providers.Services.csproj", "{08DAB19C-DF0F-4265-B09B-A0D3BCFEED98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,20 +73,25 @@ Global
 		{F1B203B1-8D38-4C74-A797-1A43B8CA2DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1B203B1-8D38-4C74-A797-1A43B8CA2DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1B203B1-8D38-4C74-A797-1A43B8CA2DE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08DAB19C-DF0F-4265-B09B-A0D3BCFEED98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08DAB19C-DF0F-4265-B09B-A0D3BCFEED98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08DAB19C-DF0F-4265-B09B-A0D3BCFEED98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08DAB19C-DF0F-4265-B09B-A0D3BCFEED98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{649FF06C-3758-40B8-BEF6-C12B6FBB3550} = {3076C23D-D6C8-4959-97AD-DBCB3FC58F3A}
-		{531EFF60-0AF6-4B28-AAF4-7E83240FAAB5} = {DE79198F-2A5A-491D-926B-95266C109C17}
-		{38008B85-6441-453F-975F-5369FCBC4C37} = {3076C23D-D6C8-4959-97AD-DBCB3FC58F3A}
-		{F87ADC6C-0D39-42BB-B210-F9F612917CD7} = {A4336C08-C82A-42E0-BA87-B88D42285A45}
-		{1A4E62A2-7FC6-4418-AAFC-7D7E17554F20} = {A806F21D-73B6-47AE-B15A-C87D9F0FC4DD}
-		{E8673233-DAC7-4607-9901-239F1CD3306E} = {DE23C6CC-F21D-46D7-AE1E-90C8537DEBC3}
+		{649FF06C-3758-40B8-BEF6-C12B6FBB3550} = {8BDC9875-875B-4307-B5BE-4DE56FB24C9A}
+		{531EFF60-0AF6-4B28-AAF4-7E83240FAAB5} = {386C46F5-A3C2-46AC-9E99-C43BE601B2EC}
+		{38008B85-6441-453F-975F-5369FCBC4C37} = {386C46F5-A3C2-46AC-9E99-C43BE601B2EC}
+		{F87ADC6C-0D39-42BB-B210-F9F612917CD7} = {E4D35E45-0BB7-4B18-A657-8525E7C8B8F1}
+		{1A4E62A2-7FC6-4418-AAFC-7D7E17554F20} = {E4D35E45-0BB7-4B18-A657-8525E7C8B8F1}
+		{E8673233-DAC7-4607-9901-239F1CD3306E} = {3076C23D-D6C8-4959-97AD-DBCB3FC58F3A}
 		{B50C06F8-FC4C-49AA-855F-6DEF9AA7A344} = {3076C23D-D6C8-4959-97AD-DBCB3FC58F3A}
-		{009DC292-634B-4C09-934C-B3AFE5EE20DA} = {A4336C08-C82A-42E0-BA87-B88D42285A45}
-		{F1B203B1-8D38-4C74-A797-1A43B8CA2DE4} = {3076C23D-D6C8-4959-97AD-DBCB3FC58F3A}
+		{009DC292-634B-4C09-934C-B3AFE5EE20DA} = {E4D35E45-0BB7-4B18-A657-8525E7C8B8F1}
+		{F1B203B1-8D38-4C74-A797-1A43B8CA2DE4} = {8BDC9875-875B-4307-B5BE-4DE56FB24C9A}
+		{08DAB19C-DF0F-4265-B09B-A0D3BCFEED98} = {8BDC9875-875B-4307-B5BE-4DE56FB24C9A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF410442-F9D0-4665-9AEE-CDECB79AD029}

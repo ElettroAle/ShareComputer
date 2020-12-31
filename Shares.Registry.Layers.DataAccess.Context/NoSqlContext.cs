@@ -13,7 +13,7 @@ namespace Shares.Registry.Layers.DataAccess.Context
     /// </summary>
     public sealed class NoSqlContext : IContext
     {
-        public NoSqlContext(IClient client)
+        public NoSqlContext(IClient client, IEnumerable<IContainer> containers)
         {
             // Containers Initialization
             Containers = new List<IContainer>()

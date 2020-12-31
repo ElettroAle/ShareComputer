@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Shares.Registry.Abstractions.Business.Services
 {
-    public interface IComputerService
+    public interface IComputeService
     {
-        double ComputeShare();
+        double Compute();
     }
 }

@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace Shares.Registry.Abstractions.Unit.Test.Fixture
 {
-    public class FixtureContext : IDisposable
+    public sealed class FixtureContext : IDisposable
     {
         private DummyItem dummyItem = null;
         public IEntity GetDummyEntityInstance() => dummyItem ??= new DummyItem();
@@ -33,8 +33,8 @@ namespace Shares.Registry.Abstractions.Unit.Test.Fixture
 
             public DummyItem GenerateProperties()
             {
-                ContainerKey = Guid.NewGuid().ToString();
-                Key = new object();
+                PartitionKey = Guid.NewGuid().ToString();
+                PrimaryKey = new object();
                 StringProperty = Guid.NewGuid().ToString();
                 BoolProperty = new Faker().Random.Bool();
                 ObjectProperty = new Faker().Random.CollectionItem(new List<object>

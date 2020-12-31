@@ -5,9 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shares.Registry.Abstractions.App.Logging
+namespace Shares.Registry.Presentation.App.Logging
 {
-    class LoggerProvider : ILoggerProvider
+    internal class LoggerProvider : ILoggerProvider
     {
         private readonly IConfiguration configuration;
         public LoggerProvider(IConfiguration configuration) => this.configuration = configuration;

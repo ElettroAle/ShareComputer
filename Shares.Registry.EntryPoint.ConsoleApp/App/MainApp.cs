@@ -14,6 +14,7 @@ namespace Shares.Registry.EntryPoint.ConsoleApp.App
     {
         private readonly ILogger logger; 
         public MainApp(ILogger logger) => this.logger = logger;
-        public async Task RunAsync() => logger.LogInformation("Hello App");
+        public async Task RunAsync(object[] args) => await Task.Run(() => logger.LogInformation("Hello App"));
+        
     }
 }

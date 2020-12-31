@@ -52,8 +52,8 @@ namespace Shares.Registry.Test.Abstractions.Mock
         public Mock<IEntity> GetMockItem(bool useFakeProperties, string containerName = null)
         {
             Mock<IEntity> item = new Mock<IEntity>();
-            item.SetupGet(x => x.Key).Returns(new object());
-            item.SetupGet(x => x.ContainerKey).Returns(containerName ?? new Faker("en").Random.Word());
+            item.SetupGet(x => x.PrimaryKey).Returns(new object());
+            item.SetupGet(x => x.PartitionKey).Returns(containerName ?? new Faker("en").Random.Word());
             item.Setup(x => x.GetProperties()).Returns(() => !useFakeProperties ? null : new List<Property>
             {
                 GetRandomProperty(), GetRandomProperty(), GetRandomProperty(), GetRandomProperty()

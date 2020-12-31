@@ -11,10 +11,10 @@ namespace Shares.Registry.Abstraction.Database.Structure
         /// <summary>
         /// Container name, it's the name of the container. For example, it should be the Azure Table Storage Partition Key
         /// </summary>
-        string ContainerKey { get; }
+        string PartitionKey { get; }
         /// <summary>
         /// Primary Key of the item. For example, it should be the Azure Table Storage Row Key
         /// </summary>
-        object Key { get; }
+        object PrimaryKey { get; }
     }
 }

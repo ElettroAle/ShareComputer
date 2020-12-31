@@ -5,7 +5,8 @@ using Xunit;
 
 namespace Shares.Registry.Test.Abstractions
 {
-    public abstract class Test : ITest, IClassFixture<FixtureContext>
+    [CollectionDefinition(nameof(FixtureContext))]
+    public abstract class Test : ITest, ICollectionFixture<FixtureContext>
     {
         public FixtureContext TestFixture;
         public MockManager MockManager => TestFixture.MockManager;

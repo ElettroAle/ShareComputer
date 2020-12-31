@@ -6,6 +6,7 @@ using System.Text;
 
 namespace Shares.Registry.Test.XUnit.Mvvm.Tests.Model
 {
+    [Xunit.Collection(nameof(FixtureContext))]
     public class ClientTest : Abstractions.Test
     {
         public ClientTest(FixtureContext testFixture) : base(testFixture)

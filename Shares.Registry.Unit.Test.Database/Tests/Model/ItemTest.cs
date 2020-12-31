@@ -39,6 +39,6 @@ namespace Shares.Registry.Test.XUnit.Mvvm.Tests.Model
             return properties.Any() && properties.Select(x => x.Value).All(x => x != null);
         }
         private bool CheckIsEmpty(IEntity dummy)
-            => String.IsNullOrWhiteSpace(dummy.ContainerKey);
+            => String.IsNullOrWhiteSpace(dummy.PartitionKey);
     }
 }
