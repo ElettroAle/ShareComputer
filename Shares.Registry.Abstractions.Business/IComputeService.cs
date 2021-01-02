@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shares.Registry.Abstractions.Business.Services
+namespace Shares.Registry.Business.Abstractions.Services
 {
     public interface IComputeService
     {

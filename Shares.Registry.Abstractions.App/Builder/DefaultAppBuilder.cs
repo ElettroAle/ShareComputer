@@ -2,8 +2,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-using Shares.Registry.EntryPoint.ConsoleApp.Abstractions;
-using Shares.Registry.EntryPoint.ConsoleApp.Runtime;
 using Shares.Registry.Presentation.App.Logging;
 
 using System;

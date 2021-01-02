@@ -1,13 +1,9 @@
 ﻿
-using Share.Registry.Database.FileSystem.Entities;
-
-using Shares.Registry.Abstraction.Database.Structure;
-
 using System;
 
-namespace Shares.Registry.Layers.DataAccess.Models.Entities
+namespace Shares.Registry.DataAccess.Objects.Shares
 {
-    public class TableSharePurchase : Entity, IEntity
+    public class SharePurchase
     {
         public string Name { get; set; }
         public int OperationType { get; set; }

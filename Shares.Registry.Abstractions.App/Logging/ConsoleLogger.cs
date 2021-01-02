@@ -24,7 +24,7 @@ namespace Shares.Registry.Presentation.App.Logging
                 case LogLevel.None:
                     break;
                 case LogLevel.Debug:
-                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
                     break;
                 case LogLevel.Information:
                     Console.ForegroundColor = ConsoleColor.Cyan;
@@ -36,6 +36,7 @@ namespace Shares.Registry.Presentation.App.Logging
                     Console.ForegroundColor = ConsoleColor.Red;
                     break;
                 case LogLevel.Critical:
+                    Console.ForegroundColor = ConsoleColor.Gray;
                     break;
             }
             if (exception != null) Console.WriteLine(exception.ToString());

@@ -1,12 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-using Shares.Registry.EntryPoint.ConsoleApp.Abstractions;
-
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shares.Registry.EntryPoint.ConsoleApp.Runtime
+namespace Shares.Registry.Presentation.App
 {
     public interface IAppBuilder
     {

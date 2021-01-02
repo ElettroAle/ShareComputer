@@ -1,4 +1,5 @@
-﻿using Shares.Registry.Abstraction.Database.Connections;
+﻿
+using Shares.Registry.Abstraction.Database.Connections;
 using Shares.Registry.Abstraction.Database.Structure;
 
 using System;
@@ -10,7 +11,7 @@ using System.Linq.Expressions;
 
 using IContainer = Shares.Registry.Abstraction.Database.Structure.IContainer;
 
-namespace Share.Registry.Database.Models.Containers
+namespace Shares.Registry.Business.Abstractions.Database.Structure
 {
     /// <summary>
     /// Models the database container. It's a mix of IQuerable and IEnumerable interfaces. Honestly speaking, I don't know if i need it, probably a simple List is enough
@@ -19,9 +20,9 @@ namespace Share.Registry.Database.Models.Containers
     {
 
         private IDataReader Reader { get; }
-        public Container(IDataReader reader, string name = "")
+        public Container(IClient client, string name = "")
         {
-            Reader = reader;
+            Reader = client;
             Name = string.IsNullOrWhiteSpace(name) ? ElementType.Name : name;
         }
 
@@ -31,7 +32,7 @@ namespace Share.Registry.Database.Models.Containers
         public Expression Expression { get; private set; }
         public IQueryProvider Provider => Reader;
 
-        public IEnumerator<IEntity> GetEnumerator() => (Provider.Execute<IEnumerable<IEntity>>(Expression)).GetEnumerator();
-        IEnumerator IEnumerable.GetEnumerator() => (Provider.Execute<IEnumerable<TItem>>(Expression)).GetEnumerator();
+        public IEnumerator<IEntity> GetEnumerator() => Provider.Execute<IEnumerable<IEntity>>(Expression).GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => Provider.Execute<IEnumerable<TItem>>(Expression).GetEnumerator();
     }
 }

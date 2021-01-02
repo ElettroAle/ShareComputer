@@ -9,17 +9,13 @@ using System.Collections.Generic;
 namespace Shares.Registry.Layers.DataAccess.Context
 {
     /// <summary>
-    /// Class used to design the no-sql database shape. Don't care about what type of client you'll use. It will be inject by the constructor unsing the <see cref="IClient"/> interface
+    /// Class used to design the database shape. Don't care about what type of client you'll use. It will be inject by the constructor unsing the <see cref="IClient"/> interface
     /// </summary>
-    public sealed class NoSqlContext : IContext
+    public sealed class DefaultContext : IContext
     {
-        public NoSqlContext(IClient client, IEnumerable<IContainer> containers)
+        public DefaultContext(IClient client, IEnumerable<IContainer> containers)
         {
-            // Containers Initialization
-            Containers = new List<IContainer>()
-            {
-                new Container<TableSharePurchase>(client)
-            };
+            Containers = containers;
             Client = client;
             client.Open();
         }

@@ -2,6 +2,7 @@
 using Shares.Registry.Abstraction.Database.Connections;
 
 using System;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 
@@ -9,21 +10,26 @@ namespace Shares.Registry.Database.FileSystem
 {
     public class FileSystemClient : IClient
     {
-        public bool IsOpen => throw new NotImplementedException();
+        private readonly string root = "C://db";
+        public FileSystemClient()
+        {
+            string[] tables = Directory.GetFiles(root, "table_*.json", SearchOption.AllDirectories);
+        }
+
+        public bool IsOpen => true;
 
         public void Close()
         {
-            throw new NotImplementedException();
         }
 
         public IQueryable CreateQuery(Expression expression)
         {
-            throw new NotImplementedException();
+            
         }
 
         public IQueryable<TElement> CreateQuery<TElement>(Expression expression)
         {
-            throw new NotImplementedException();
+            return new Container<TElement>
         }
 
         public object Execute(Expression expression)
@@ -38,7 +44,7 @@ namespace Shares.Registry.Database.FileSystem
 
         public IClient Open()
         {
-            throw new NotImplementedException();
+            return this;
         }        
 
         public void Save()

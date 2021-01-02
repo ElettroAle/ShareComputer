@@ -9,9 +9,9 @@ using Shares.Registry.Abstractions.Unit.Test.Fixture;
 
 namespace Shares.Registry.Test.XUnit.Mvvm.Tests.Model
 {
-    public class ItemTest : Abstractions.Test
+    public class EntityTest : Abstractions.Test
     {
-        public ItemTest(FixtureContext testFixture) : base(testFixture) {}
+        public EntityTest(FixtureContext testFixture) : base(testFixture) {}
         private IEntity DummyItem => TestFixture.GetDummyEntityInstance();
 
         [Fact]
