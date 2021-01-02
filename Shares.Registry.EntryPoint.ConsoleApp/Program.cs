@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Shares.Registry.Data.Fake.Generators;
 using Shares.Registry.Business.Importer.Interfaces;
 using Shares.Registry.Business.Importer;
+using Shares.Registry.Business.Computer.Interfaces;
+using Shares.Registry.Business.Computer;
 
 namespace Shares.Registry.ConsoleApp
 {
@@ -31,7 +33,8 @@ namespace Shares.Registry.ConsoleApp
             // Computer
             await appBuilder
                 .ConfigureServiceProvider(serviceCollection => serviceCollection
-                    .AddTextFileDatabaseReader())
+                    .AddTextFileDatabaseReader()
+                    .AddSingleton<IComputeService, ComputeService>())
                 .Build<ComputeApp>()
                 .RunAsync(args);
         }

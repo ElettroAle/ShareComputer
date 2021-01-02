@@ -14,15 +14,17 @@ namespace Shares.Registry.Data.FileSystem.Interfaces
     }
     internal static class IFileSystemKeyExtensions
     {
-        public static async Task WriteAsync(this IFileSystemEntity fileSystemKey, string tablePath)
+        public static async Task WriteAsync<TFileSystemEntity>(this TFileSystemEntity fileSystemEntity, string tablePath) where TFileSystemEntity : IFileSystemEntity
         {
-            string path = fileSystemKey.GetFilePath(tablePath);
-            if (!Directory.Exists(path)) Directory.CreateDirectory(path);
-            await File.WriteAllTextAsync(path, JsonSerializer.Serialize(fileSystemKey));
+            string folder = fileSystemEntity.GetFolder(tablePath);
+            if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+            await File.WriteAllTextAsync(fileSystemEntity.GetFilePath(tablePath), JsonSerializer.Serialize(fileSystemEntity));
         }
         private static string GetFilePath(this IFileSystemEntity fileSystemEntity, string tablePath) 
-            => $"{tablePath}/{fileSystemEntity.PartitionKey}/{fileSystemEntity.GetFileName()}.json";
+            => $"{fileSystemEntity.GetFolder(tablePath)}/{fileSystemEntity.GetFileName()}";
+        private static string GetFolder(this IFileSystemEntity fileSystemEntity, string tablePath) 
+            => $"{tablePath}/{fileSystemEntity.PartitionKey}";
         private static string GetFileName(this IFileSystemEntity fileSystemKey)
-            => $"{fileSystemKey.PrimaryKey}";
+            => $"{fileSystemKey.PrimaryKey}.json";
     }
 }
