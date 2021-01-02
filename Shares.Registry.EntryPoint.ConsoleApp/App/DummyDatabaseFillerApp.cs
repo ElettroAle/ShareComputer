@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-using Shares.Registry.Business.Importer;
+using Shares.Registry.Business.Importer.Interfaces;
 using Shares.Registry.Presentation.App;
 
 using System;

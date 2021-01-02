@@ -16,10 +16,19 @@ namespace Shares.Registry.Data.FileSystem.Databases
 {
     public class TextFileDatabase : IDataReader, IDataWriter
     {
-        private static readonly string DatabasePath = AppDomain.CurrentDomain.BaseDirectory + "/database";
+        private static readonly string DatabasePath = AppDomain.CurrentDomain.BaseDirectory + "\\database";
         private readonly IMapper mapper;
-        public TextFileDatabase(IMapper mapper) => this.mapper = mapper;
-
+        static TextFileDatabase() 
+        {
+            if (!Directory.Exists(DatabasePath))
+            {
+                Directory.CreateDirectory(DatabasePath);
+            }
+        }
+        public TextFileDatabase(IMapper mapper)
+        {
+            this.mapper = mapper;
+        }
         public async Task<IEnumerable<SharePurchase>> GetAllSharesAsync() => (await Task.WhenAll(
             Directory
                 .GetFiles(GetTablePath(nameof(AccessObjects.SharePurchase)), "*.json", SearchOption.AllDirectories)
@@ -41,6 +50,6 @@ namespace Shares.Registry.Data.FileSystem.Databases
             IEnumerable<Task> tasks = dataAccessSharesPurchases.Select(dao => dao.WriteAsync(tablePath));
             await Task.WhenAll(tasks);
         }
-        private static string GetTablePath(string tableName) => $"{DatabasePath}/{tableName}";
+        private static string GetTablePath(string tableName) => $"{DatabasePath}\\{tableName}";
     }
 }

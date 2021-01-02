@@ -1,4 +1,5 @@
 ﻿using Shares.Registry.Business.Data.Interfaces;
+using Shares.Registry.Business.Importer.Interfaces;
 
 using System;
 using System.Collections.Generic;

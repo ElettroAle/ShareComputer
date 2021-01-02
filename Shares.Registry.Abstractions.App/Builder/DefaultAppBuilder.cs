@@ -13,8 +13,11 @@ namespace Shares.Registry.Presentation.App.Builder
     public class DefaultAppBuilder : IAppBuilder
     {
         readonly IConfiguration configuration = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddJsonFile("appsettings.Development.json", optional: false, reloadOnChange: true)
+#if DEBUG
+                .AddJsonFile("appsettings.Development.json", optional: true, reloadOnChange: true)
+#endif
                 .AddEnvironmentVariables()
                 .Build();
         public IServiceCollection ServiceCollection { get; private set; } = new ServiceCollection();
@@ -25,7 +28,7 @@ namespace Shares.Registry.Presentation.App.Builder
                 .AddSingleton(x => configuration)
                 .AddLogging()
                 .AddSingleton<ILogger, ConsoleLogger>()
-                .AddSingleton<TApp>()
+                .AddSingleton<IApp, TApp>()
                 .BuildServiceProvider();
             serviceProvider
                 .GetService<ILogger>()

@@ -16,7 +16,7 @@ namespace Shares.Registry.Presentation.ConsoleApp.App
         private readonly ILogger logger;
         private readonly IComputeService computeService;
 
-        public ComputeApp(ILogger logger, IComputeService computeService)
+        public ComputeApp(IComputeService computeService, ILogger logger)
         {
             this.logger = logger;
             this.computeService = computeService;

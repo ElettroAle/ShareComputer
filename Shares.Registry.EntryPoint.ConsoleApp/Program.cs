@@ -4,11 +4,12 @@ using System.Threading.Tasks;
 
 using Microsoft.Extensions.DependencyInjection;
 using Shares.Registry.Presentation.ConsoleApp.App;
-using Shares.Registry.Business.Computer;
-using Shares.Registry.Business.Computer.Interfaces;
 using Shares.Registry.Business.Data.Interfaces;
 using Shares.Registry.Presentation.App;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Shares.Registry.Data.Fake.Generators;
+using Shares.Registry.Business.Importer.Interfaces;
+using Shares.Registry.Business.Importer;
 
 namespace Shares.Registry.ConsoleApp
 {
@@ -18,18 +19,21 @@ namespace Shares.Registry.ConsoleApp
         {
             IAppBuilder appBuilder = new DefaultAppBuilder();
 
+            // Database filler
             await appBuilder
                 .ConfigureServiceProvider(serviceCollection => serviceCollection
-                    .AddSingleton<IDataReader, Data.FileSystem.Generators.SharePurchaseGenerator>()
-                    .AddSingleton<IDataWriter, Data.FileSystem.Databases.TextFileDatabase>()
-                    .AddSingleton<IComputeService, ComputeService>())
-                .Build<DummyDatabaseFillerApp>().RunAsync(args);
+                    .AddSingleton<IDataReader, FakeSharePurchaseGenerator>()
+                    .AddTextFileDatabaseWriter()
+                    .AddSingleton<IImportService, ImportService>())
+                .Build<DummyDatabaseFillerApp>()
+                .RunAsync(args);
 
+            // Computer
             await appBuilder
                 .ConfigureServiceProvider(serviceCollection => serviceCollection
-                    .RemoveAll<IDataReader>()
-                    .AddSingleton<IDataReader, Data.FileSystem.Databases.TextFileDatabase>())
-                .Build<ComputeApp>().RunAsync(args);
+                    .AddTextFileDatabaseReader())
+                .Build<ComputeApp>()
+                .RunAsync(args);
         }
     }
 }
