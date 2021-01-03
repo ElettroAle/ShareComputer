@@ -11,22 +11,23 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Shares.Registry.Data.FileSystem.Interfaces;
 using AutoMapper;
+using Shares.Registry.Business.Data.Configuration;
+using Microsoft.Extensions.Configuration;
 
 namespace Shares.Registry.Data.FileSystem.Databases
 {
     public class TextFileDatabase : IDataReader, IDataWriter
     {
-        private static readonly string DatabasePath = AppDomain.CurrentDomain.BaseDirectory + "\\database";
+        private readonly string DatabasePath;
         private readonly IMapper mapper;
-        static TextFileDatabase() 
+        public TextFileDatabase(IConfiguration configuration, IMapper mapper)
         {
+            AppSettings.PutConfigurationsInChache(configuration);
+            DatabasePath = $"{AppDomain.CurrentDomain.BaseDirectory}\\{AppSettings.Instance.FileSystem.DatabasePath}";
             if (!Directory.Exists(DatabasePath))
             {
                 Directory.CreateDirectory(DatabasePath);
             }
-        }
-        public TextFileDatabase(IMapper mapper)
-        {
             this.mapper = mapper;
         }
         public async Task<IEnumerable<SharePurchase>> GetAllSharesAsync() => (await Task.WhenAll(
@@ -38,9 +39,11 @@ namespace Shares.Registry.Data.FileSystem.Databases
                             .Select(file => JsonSerializer
                             .Deserialize<SharePurchase>(file));
 
+        public async Task DeleteAllSharesAsync() 
+            => await Task.Run(() => Directory.Delete(DatabasePath, true));
+        
         public async Task SaveSharesAsync(IEnumerable<SharePurchase> sharePurchases)
         {
-            // todo: mapper
             IEnumerable<AccessObjects.SharePurchase> dataAccessSharesPurchases = sharePurchases
                 .Select((sharePurchaseDTO) => {
                     AccessObjects.SharePurchase sharePurchaseDAO = mapper.Map<AccessObjects.SharePurchase>(sharePurchaseDTO);
@@ -50,6 +53,6 @@ namespace Shares.Registry.Data.FileSystem.Databases
             IEnumerable<Task> tasks = dataAccessSharesPurchases.Select(dao => dao.WriteAsync(tablePath));
             await Task.WhenAll(tasks);
         }
-        private static string GetTablePath(string tableName) => $"{DatabasePath}\\{tableName}";
+        private string GetTablePath(string tableName) => $"{DatabasePath}\\{tableName}";
     }
 }

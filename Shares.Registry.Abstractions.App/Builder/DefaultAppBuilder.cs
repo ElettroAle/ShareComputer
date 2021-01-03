@@ -12,18 +12,18 @@ namespace Shares.Registry.Presentation.App.Builder
 {
     public class DefaultAppBuilder : IAppBuilder
     {
-        readonly IConfiguration configuration = new ConfigurationBuilder()
+        private readonly IConfigurationBuilder ConfigurationBuilder = new ConfigurationBuilder()
             .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
 #if DEBUG
             .AddJsonFile("appsettings.Development.json", optional: true, reloadOnChange: true)
 #endif
-            .AddEnvironmentVariables()
-            .Build();
+            .AddEnvironmentVariables();
+
         public IServiceCollection ServiceCollection { get; private set; } = new ServiceCollection();
 
         public IApp Build<TApp>() where TApp : class, IApp => ServiceCollection
-            .AddSingleton(x => configuration)
+            .AddSingleton<IConfiguration>(x => ConfigurationBuilder.Build())
             .AddLogging()
             .AddSingleton<ILogger, ConsoleLogger>()
             .AddSingleton<IApp, TApp>()

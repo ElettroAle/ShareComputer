@@ -8,5 +8,6 @@ namespace Shares.Registry.Business.Data.Interfaces
     public interface IDataWriter
     {
         Task SaveSharesAsync(IEnumerable<SharePurchase> sharePurchases);
+        Task DeleteAllSharesAsync();
     }
 }

@@ -18,8 +18,10 @@ namespace Shares.Registry.Business.Importer
             this.dataWriter = dataWriter;
             this.dataReader = dataReader;
         }
+
         public async Task ImportSharesAsync()
         {
+            await dataWriter.DeleteAllSharesAsync();
             var shares = await dataReader.GetAllSharesAsync();
             await dataWriter.SaveSharesAsync(shares);
         }

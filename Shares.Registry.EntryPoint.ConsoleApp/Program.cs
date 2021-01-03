@@ -12,6 +12,7 @@ using Shares.Registry.Business.Importer.Interfaces;
 using Shares.Registry.Business.Importer;
 using Shares.Registry.Business.Computer.Interfaces;
 using Shares.Registry.Business.Computer;
+using Microsoft.Extensions.Configuration;
 
 namespace Shares.Registry.ConsoleApp
 {
@@ -21,6 +22,7 @@ namespace Shares.Registry.ConsoleApp
         {
             IAppBuilder appBuilder = new DefaultAppBuilder();
 
+#if DEBUG
             // Database filler
             await appBuilder
                 .ConfigureServiceProvider(serviceCollection => serviceCollection
@@ -29,6 +31,7 @@ namespace Shares.Registry.ConsoleApp
                     .AddSingleton<IImportService, ImportService>())
                 .Build<DummyDatabaseFillerApp>()
                 .RunAsync(args);
+#endif
 
             // Computer
             await appBuilder
