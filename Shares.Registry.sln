@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PL", "PL", "{3076C23D-D6C8-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Abstractions.Unit.Test", "Shares.Registry.Abstractions.Unit.Test\Shares.Registry.Abstractions.Unit.Test.csproj", "{38008B85-6441-453F-975F-5369FCBC4C37}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Presentation.ConsoleApp", "Shares.Registry.EntryPoint.ConsoleApp\Shares.Registry.Presentation.ConsoleApp.csproj", "{E8673233-DAC7-4607-9901-239F1CD3306E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Presentation.Console", "Shares.Registry.EntryPoint.ConsoleApp\Shares.Registry.Presentation.Console.csproj", "{E8673233-DAC7-4607-9901-239F1CD3306E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shares.Registry.Presentation.App", "Shares.Registry.Abstractions.App\Shares.Registry.Presentation.App.csproj", "{B50C06F8-FC4C-49AA-855F-6DEF9AA7A344}"
 EndProject

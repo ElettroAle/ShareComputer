@@ -3,7 +3,6 @@
 using System.Threading.Tasks;
 
 using Microsoft.Extensions.DependencyInjection;
-using Shares.Registry.Presentation.ConsoleApp.App;
 using Shares.Registry.Business.Data.Interfaces;
 using Shares.Registry.Presentation.App;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -13,8 +12,9 @@ using Shares.Registry.Business.Importer;
 using Shares.Registry.Business.Computer.Interfaces;
 using Shares.Registry.Business.Computer;
 using Microsoft.Extensions.Configuration;
+using Shares.Registry.Presentation.Console.App;
 
-namespace Shares.Registry.ConsoleApp
+namespace Shares.Registry.Presentation.Console
 {
     class Program
     {
