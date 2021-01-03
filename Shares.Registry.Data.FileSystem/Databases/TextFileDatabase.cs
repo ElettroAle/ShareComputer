@@ -30,9 +30,14 @@ namespace Shares.Registry.Data.FileSystem.Databases
             }
             this.mapper = mapper;
         }
-        public async Task<IEnumerable<SharePurchase>> GetAllSharesAsync() => (await Task.WhenAll(
+        public async Task<IEnumerable<SharePurchase>> GetAllSharesAsync() 
+            => await GetSharesFromFolderAsync(GetTablePath(nameof(AccessObjects.SharePurchase)));
+        public async Task<IEnumerable<SharePurchase>> GetSharesAsync(string companyName)
+            => await GetSharesFromFolderAsync(GetCompanyPath(nameof(AccessObjects.SharePurchase), companyName));
+        
+        private async Task<IEnumerable<SharePurchase>> GetSharesFromFolderAsync(string folderPath) => (await Task.WhenAll(
             Directory
-                .GetFiles(GetTablePath(nameof(AccessObjects.SharePurchase)), "*.json", SearchOption.AllDirectories)
+                .GetFiles(folderPath, "*.json", SearchOption.AllDirectories)
                 .Select(fileName
                     => File
                         .ReadAllTextAsync(fileName))))
@@ -54,5 +59,6 @@ namespace Shares.Registry.Data.FileSystem.Databases
             await Task.WhenAll(tasks);
         }
         private string GetTablePath(string tableName) => $"{DatabasePath}\\{tableName}";
+        private string GetCompanyPath(string tableName, string partitionKey) => $"{GetTablePath(tableName)}\\{partitionKey}";
     }
 }

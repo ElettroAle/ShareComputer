@@ -19,27 +19,12 @@ namespace Shares.Registry.Presentation.Console
     class Program
     {
         static async Task Main(string[] args)
-        {
-            IAppBuilder appBuilder = new DefaultAppBuilder();
-
-#if DEBUG
-            // Database filler
-            await appBuilder
+            => await new DefaultAppBuilder()
                 .ConfigureServiceProvider(serviceCollection => serviceCollection
-                    .AddSingleton<IDataReader, FakeSharePurchaseGenerator>()
                     .AddTextFileDatabaseWriter()
+                    .AddSingleton<IDataReader, FakeSharePurchaseGenerator>()
                     .AddSingleton<IImportService, ImportService>())
-                .Build<DummyDatabaseFillerApp>()
+                .Build<DatabaseLoaderApp>()
                 .RunAsync(args);
-#endif
-
-            // Computer
-            await appBuilder
-                .ConfigureServiceProvider(serviceCollection => serviceCollection
-                    .AddTextFileDatabaseReader()
-                    .AddSingleton<IComputeService, ComputeService>())
-                .Build<ComputeApp>()
-                .RunAsync(args);
-        }
     }
 }

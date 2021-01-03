@@ -9,5 +9,6 @@ namespace Shares.Registry.Business.Data.Interfaces
     public interface IDataReader
     {
         Task<IEnumerable<SharePurchase>> GetAllSharesAsync();
+        Task<IEnumerable<SharePurchase>> GetSharesAsync(string companyName);
     }
 }
