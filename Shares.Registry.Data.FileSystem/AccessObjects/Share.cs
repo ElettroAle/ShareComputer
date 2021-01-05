@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Shares.Registry.Data.FileSystem.AccessObjects
@@ -9,6 +10,6 @@ namespace Shares.Registry.Data.FileSystem.AccessObjects
     internal class Share : Business.Abstractions.DataPlugins.TransferObjects.Share, IFileSystemEntity
     {
         public string PartitionKey => this.Name;
-        public string PrimaryKey => $"{this.Timestamp.Date:yyyyMMdd}\\{Guid.NewGuid()}";
+        public string PrimaryKey => $"{this.Timestamp.Date:yyyyMMdd}{Path.DirectorySeparatorChar}{Guid.NewGuid()}";
     }
 }

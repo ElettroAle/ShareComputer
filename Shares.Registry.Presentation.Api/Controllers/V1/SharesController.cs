@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-using Shares.Registry.Business.Abstractions.Interfaces;
+using Shares.Registry.Business.Abstractions;
 
 using System;
 using System.Collections.Generic;
@@ -15,8 +15,8 @@ namespace Shares.Registry.Presentation.Api.Controllers.V1
     [ApiController]
     public class SharesController : ControllerBase
     {
-        private readonly IComputeService computeService;
-        public SharesController(IComputeService computeService) => this.computeService = computeService;
+        private readonly ISharesComputeService computeService;
+        public SharesController(ISharesComputeService computeService) => this.computeService = computeService;
 
         // GET: api/v1/<SharesController>
         [HttpGet]

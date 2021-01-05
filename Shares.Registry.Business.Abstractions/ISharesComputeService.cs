@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shares.Registry.Business.Abstractions.Interfaces
+namespace Shares.Registry.Business.Abstractions
 {
-    public interface IComputeService
+    public interface ISharesComputeService
     {
         Task<string> ComputeAsync();
     }

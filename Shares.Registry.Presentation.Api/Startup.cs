@@ -5,8 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
-using Shares.Registry.Business.Abstractions.Interfaces;
-
 namespace Shares.Registry.Presentation.Api
 {
     public class Startup

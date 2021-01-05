@@ -4,10 +4,10 @@ using System.Threading.Tasks;
 
 using Microsoft.Extensions.DependencyInjection;
 using Shares.Registry.Presentation.Console.App;
-using Shares.Registry.Business.Abstractions.Interfaces;
 using Shares.Registry.Business.Shares;
-using Shares.Registry.Business.Abstractions.DataPlugins.Interfaces;
 using Shares.Registry.Data.Fake.Providers;
+using Shares.Registry.Business.Tenant.Data.Interfaces;
+using Shares.Registry.Business.Abstractions;
 
 namespace Shares.Registry.Presentation.Console
 {
@@ -19,7 +19,7 @@ namespace Shares.Registry.Presentation.Console
                     .AddSingleton<ITenantDataReader, TestTenantService>()
                     .AddFakeDataReader()
                     .AddTextFileDataWriter()
-                    .AddSingleton<IImportService, ImportService>())
+                    .AddSingleton<ISharesImportService, ShareImportService>())
                 .Build<DatabaseLoaderApp>()
                 .RunAsync(args);
     }

@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shares.Registry.Business.Importer\Shares.Registry.Business.Shares.csproj" />
-    <ProjectReference Include="..\Shares.Registry.Business.Models\Shares.Registry.Business.Abstractions.DataPlugins.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Business.Models\Shares.Registry.Business.Shares.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Business.Tenant.Abstractions\Shares.Registry.Business.Tenant.csproj" />
   </ItemGroup>
 
 </Project>

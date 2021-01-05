@@ -36,3 +36,4 @@ namespace Shares.Registry.Presentation.App.Builder
         }
     }
 }
+

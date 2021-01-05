@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shares.Registry.Business.Abstractions.DataPlugins.TransferObjects
+namespace Shares.Registry.Business.Financials.Data.TransferObjects
 {
-    public class Financial : DTO
+    public class Financial
     {
         public DateTime Timestamp { get; set; }
         public decimal Amount { get; set; }

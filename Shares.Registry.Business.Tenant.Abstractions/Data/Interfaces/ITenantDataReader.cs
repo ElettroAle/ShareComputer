@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shares.Registry.Business.Abstractions.DataPlugins.Interfaces
+namespace Shares.Registry.Business.Tenant.Data.Interfaces
 {
     public interface ITenantDataReader
     {

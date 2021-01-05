@@ -1,10 +1,10 @@
-﻿using Shares.Registry.Business.Abstractions.DataPlugins.Enumerator;
+﻿using Shares.Registry.Business.Shares.Data.Enumerator;
 
 using System;
 
 namespace Shares.Registry.Business.Abstractions.DataPlugins.TransferObjects
 {
-    public class Share : DTO
+    public class Share
     {
         public string Name { get; set; }
         public OperationType OperationType { get; set; }

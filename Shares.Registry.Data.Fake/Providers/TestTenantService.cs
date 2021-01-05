@@ -1,8 +1,4 @@
-﻿using Shares.Registry.Business.Abstractions.DataPlugins.Interfaces;
-
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Shares.Registry.Business.Tenant.Data.Interfaces;
 
 namespace Shares.Registry.Data.Fake.Providers
 {

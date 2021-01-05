@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-using Shares.Registry.Business.Abstractions.DataPlugins.Interfaces;
+using Shares.Registry.Business.Shares.Data.Interfaces;
 using Shares.Registry.Data.Fake.Generators;
 
 namespace Microsoft.Extensions.DependencyInjection

@@ -1,10 +1,10 @@
-﻿using Shares.Registry.Business.Abstractions.DataPlugins.TransferObjects;
+﻿using Shares.Registry.Business.Financials.Data.TransferObjects;
 
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shares.Registry.Business.Abstractions.DataPlugins.Interfaces
+namespace Shares.Registry.Business.Financials.Data.Interfaces
 {
     public interface IFinancialDataReader
     {

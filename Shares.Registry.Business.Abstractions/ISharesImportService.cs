@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Shares.Registry.Business.Abstractions.Interfaces
+namespace Shares.Registry.Business.Abstractions
 {
-    public interface IImportService
+    public interface ISharesImportService
     {
         Task ImportAsync();
         Task Clean();

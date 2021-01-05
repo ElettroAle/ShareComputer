@@ -1,11 +1,12 @@
 ﻿using Bogus;
 
-using Shares.Registry.Business.Abstractions.DataPlugins.Enumerator;
-using Shares.Registry.Business.Abstractions.DataPlugins.Interfaces;
 using Shares.Registry.Business.Abstractions.DataPlugins.TransferObjects;
+using Shares.Registry.Business.Shares.Data.Enumerator;
+using Shares.Registry.Business.Shares.Data.Interfaces;
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,7 +24,7 @@ namespace Shares.Registry.Data.Fake.Generators
             to ??= DateTime.Now;
             from ??= to.Value.AddDays(-100);
             if (numberOfItems <= 0) numberOfItems = new Faker().Random.Int(10, 1000);
-            if (companyNames == null || companyNames.Length <= 0) companyNames = GetCompanyNames();
+            if (companyNames == null || companyNames.Length <= 0) companyNames = GetCompanyNames().Select(x => x.Replace(" ", "")).ToArray();
             return new Faker<Share>()
                 .RuleFor(dto => dto.Name, faker => companyNames[faker.Random.Int(0, companyNames.Length-1)])
                 .RuleFor(dto => dto.OperationType, faker => faker.PickRandom<OperationType>())

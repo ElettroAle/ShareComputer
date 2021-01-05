@@ -9,8 +9,9 @@ using Shares.Registry.Data.FileSystem.Interfaces;
 using AutoMapper;
 using Shares.Registry.Business.Data.Configuration;
 using Microsoft.Extensions.Configuration;
-using Shares.Registry.Business.Abstractions.DataPlugins.Interfaces;
 using Shares.Registry.Business.Abstractions.DataPlugins.TransferObjects;
+using Shares.Registry.Business.Tenant.Data.Interfaces;
+using Shares.Registry.Business.Shares.Data.Interfaces;
 
 namespace Shares.Registry.Data.FileSystem.Databases
 {
@@ -25,7 +26,7 @@ namespace Shares.Registry.Data.FileSystem.Databases
             this.tenantDataReader = tenantDataReader;
             this.mapper = mapper;
             AppSettings.PutConfigurationsInChache(configuration);
-            DatabasePath = $"{AppDomain.CurrentDomain.BaseDirectory}\\{AppSettings.Instance.FileSystem.DatabasePath}\\{tenantDataReader.GetTenantId()}";
+            DatabasePath = $"{AppDomain.CurrentDomain.BaseDirectory}{AppSettings.Instance.FileSystem.DatabasePath}\\{tenantDataReader.GetTenantId()}";
             if (!Directory.Exists(DatabasePath))
             {
                 Directory.CreateDirectory(DatabasePath);
@@ -45,12 +46,21 @@ namespace Shares.Registry.Data.FileSystem.Databases
         {
             if (!shares?.Any() ?? true)
             {
-                await Task.Run(() => Directory.Delete(GetTablePath(nameof(AccessObjects.Share)), true));
+                await Task.Run(() =>
+                {
+                    string path = GetTablePath(nameof(AccessObjects.Share));
+                    if (Directory.Exists(path)) Directory.Delete(path, true);
+                });
             }
             else
             {
-                await Task.WhenAll(shares
-                    .Select(share => Task.Run(() => Directory.Delete(GetCompanyPath(nameof(AccessObjects.Share), share.Name), true))));
+                await Task.WhenAll(
+                    shares.Select(share => Task.Run(() => 
+                    {
+                        string sharePath = GetCompanyPath(nameof(AccessObjects.Share), share.Name);
+                        if (Directory.Exists(sharePath)) Directory.Delete(sharePath, true);
+                    })
+                ));
             }
         }
         public async Task AddSharesAsync(IEnumerable<Share> sharePurchases)

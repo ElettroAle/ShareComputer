@@ -7,6 +7,11 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shares.Registry.Business.Abstractions\Shares.Registry.Business.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

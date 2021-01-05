@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-using Shares.Registry.Business.Abstractions.Interfaces;
+using Shares.Registry.Business.Abstractions;
 using Shares.Registry.Presentation.App;
 
 using System;
@@ -10,10 +10,10 @@ namespace Shares.Registry.Presentation.Console.App
 {
     public class DatabaseLoaderApp : IApp
     {
-        private readonly IImportService importService;
+        private readonly ISharesImportService importService;
         private readonly ILogger logger;
 
-        public DatabaseLoaderApp(IImportService importService, ILogger logger)
+        public DatabaseLoaderApp(ISharesImportService importService, ILogger logger)
         {
             this.importService = importService;
             this.logger = logger;

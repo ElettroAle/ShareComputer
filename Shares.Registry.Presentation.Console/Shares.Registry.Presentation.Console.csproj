@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Shares.Registry.Abstractions.App\Shares.Registry.Presentation.App.csproj" />
-    <ProjectReference Include="..\Shares.Registry.Business.Importer\Shares.Registry.Business.Shares.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Business.Tenant.Abstractions\Shares.Registry.Business.Tenant.csproj" />
     <ProjectReference Include="..\Shares.Registry.Data.Fake\Shares.Registry.Data.Fake.csproj" />
     <ProjectReference Include="..\Shares.Registry.Data.FileSystem\Shares.Registry.Data.FileSystem.csproj" />
   </ItemGroup>
