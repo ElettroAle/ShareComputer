@@ -7,8 +7,8 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceCollection
     {
-        public static IServiceCollection AddFakeDataReader(this IServiceCollection services)
+        public static IServiceCollection AddFakeShareGenerator(this IServiceCollection services)
             => services
-                .AddSingleton<ISharesDataReader, FakeSharePurchaseGenerator>();
+                .AddSingleton<ISharesDataReader, FakeSharesGenerator>();
     }
 }

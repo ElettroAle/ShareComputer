@@ -1,4 +1,4 @@
-﻿using Shares.Registry.Business.Abstractions.DataPlugins.TransferObjects;
+﻿using Shares.Registry.Business.CapitalGain.Data.TransferObjects;
 
 using System;
 using System.Collections.Generic;

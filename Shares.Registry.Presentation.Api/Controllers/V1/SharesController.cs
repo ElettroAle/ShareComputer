@@ -15,8 +15,8 @@ namespace Shares.Registry.Presentation.Api.Controllers.V1
     [ApiController]
     public class SharesController : ControllerBase
     {
-        private readonly ISharesComputeService computeService;
-        public SharesController(ISharesComputeService computeService) => this.computeService = computeService;
+        private readonly ICapitalGainComputer computeService;
+        public SharesController(ICapitalGainComputer computeService) => this.computeService = computeService;
 
         // GET: api/v1/<SharesController>
         [HttpGet]

@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Shares.Registry.Business.Abstractions.DataPlugins.TransferObjects
+namespace Shares.Registry.Business.CapitalGain.Data.TransferObjects
 {
     public class Share
     {

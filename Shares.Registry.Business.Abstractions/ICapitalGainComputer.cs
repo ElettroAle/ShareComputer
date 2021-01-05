@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Shares.Registry.Business.Abstractions
 {
-    public interface ISharesComputeService
+    public interface ICapitalGainComputer
     {
-        Task<string> ComputeAsync();
+        Task ComputeAsync(int year, int month);
     }
 }

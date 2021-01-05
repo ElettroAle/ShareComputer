@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 
 using Shares.Registry.Business.Abstractions;
-using Shares.Registry.Business.Abstractions.DataPlugins.TransferObjects;
+using Shares.Registry.Business.CapitalGain.Data.TransferObjects;
 using Shares.Registry.Business.Shares.Data.Interfaces;
 
 using System;
@@ -10,15 +10,15 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Shares.Registry.Business.Shares
+namespace Shares.Registry.Business.CapitalGain
 {
-    public class ShareImportService : ISharesImportService
+    public class SharesImporter : ISharesImporter
     {
         private readonly ISharesDataWriter dataWriter;
         private readonly ISharesDataReader dataReader;
         private readonly ILogger logger;
 
-        public ShareImportService(ISharesDataWriter dataWriter, ISharesDataReader dataReader, ILogger logger)
+        public SharesImporter(ISharesDataWriter dataWriter, ISharesDataReader dataReader, ILogger logger)
         {
             this.dataWriter = dataWriter;
             this.dataReader = dataReader;

@@ -10,10 +10,10 @@ namespace Shares.Registry.Presentation.Console.App
 {
     public class DatabaseLoaderApp : IApp
     {
-        private readonly ISharesImportService importService;
+        private readonly ISharesImporter importService;
         private readonly ILogger logger;
 
-        public DatabaseLoaderApp(ISharesImportService importService, ILogger logger)
+        public DatabaseLoaderApp(ISharesImporter importService, ILogger logger)
         {
             this.importService = importService;
             this.logger = logger;

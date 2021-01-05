@@ -7,9 +7,14 @@ using System.Text;
 
 namespace Shares.Registry.Data.FileSystem.AccessObjects
 {
-    internal class Share : Business.Abstractions.DataPlugins.TransferObjects.Share, IFileSystemEntity
+    internal class Share : Business.CapitalGain.Data.TransferObjects.Share, IFileSystemEntity
     {
-        public string PartitionKey => this.Name;
-        public string PrimaryKey => $"{this.Timestamp.Date:yyyyMMdd}{Path.DirectorySeparatorChar}{Guid.NewGuid()}";
+        public string PartitionKey => $"{this.Name}{Path.DirectorySeparatorChar}{this.Timestamp.Date:yyyyMMdd}";
+        public string PrimaryKey => Guid.NewGuid().ToString();
+
+        public string GetCompanyPath(string databasePath)
+            => $"{this.GetTablePath(databasePath)}\\{this.Name}";
+        public string GetCompanyByDayPath(string databasePath)
+            => $"{this.GetTablePath(databasePath)}\\{this.PartitionKey}";
     }
 }

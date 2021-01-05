@@ -9,9 +9,9 @@ using Shares.Registry.Data.FileSystem.Interfaces;
 using AutoMapper;
 using Shares.Registry.Business.Data.Configuration;
 using Microsoft.Extensions.Configuration;
-using Shares.Registry.Business.Abstractions.DataPlugins.TransferObjects;
 using Shares.Registry.Business.Tenant.Data.Interfaces;
 using Shares.Registry.Business.Shares.Data.Interfaces;
+using Shares.Registry.Business.CapitalGain.Data.TransferObjects;
 
 namespace Shares.Registry.Data.FileSystem.Databases
 {
@@ -19,11 +19,9 @@ namespace Shares.Registry.Data.FileSystem.Databases
     {
         private readonly string DatabasePath;
         private readonly IMapper mapper;
-        private readonly ITenantDataReader tenantDataReader;
 
         public TextFileDatabaseProvider(IConfiguration configuration, IMapper mapper, ITenantDataReader tenantDataReader)
         {
-            this.tenantDataReader = tenantDataReader;
             this.mapper = mapper;
             AppSettings.PutConfigurationsInChache(configuration);
             DatabasePath = $"{AppDomain.CurrentDomain.BaseDirectory}{AppSettings.Instance.FileSystem.DatabasePath}\\{tenantDataReader.GetTenantId()}";
@@ -34,11 +32,35 @@ namespace Shares.Registry.Data.FileSystem.Databases
         }
 
         #region Reader
-        public async Task<IEnumerable<Share>> GetSharesAsync() 
-            => await GetSharesFromFolderAsync(GetTablePath(nameof(AccessObjects.Share)));
+        public async Task<IEnumerable<Share>> GetSharesAsync()
+        {
+            return await GetSharesFromFolderAsync(new AccessObjects.Share().GetTablePath(DatabasePath));
+        }
         public async Task<IEnumerable<Share>> GetSharesAsync(string companyName, DateTime? from, DateTime? to)
-            // TODO: effettuare il controllo della data
-            => await GetSharesFromFolderAsync(GetCompanyPath(nameof(AccessObjects.Share), companyName));
+        {
+            if (from == null || string.IsNullOrWhiteSpace(companyName))
+            {
+                AccessObjects.Share share = new AccessObjects.Share() { Name = companyName };
+                string path = share.GetTablePath(DatabasePath);
+                return await GetSharesFromFolderAsync(path);
+            }
+            else
+            {
+                List<Task<IEnumerable<Share>>> tasks = new List<Task<IEnumerable<Share>>>();
+                to ??= DateTime.UtcNow.Date;
+                for (int i = 0; i < (to.Value-from.Value).TotalDays ; i++)
+                {
+                    AccessObjects.Share share = new AccessObjects.Share()
+                    {
+                        Name = companyName,
+                        Timestamp = from.Value.AddDays(i)
+                    };
+                    string path = share.GetCompanyByDayPath(DatabasePath);
+                    tasks.Add(GetSharesFromFolderAsync(path));
+                }
+                return (await Task.WhenAll(tasks)).SelectMany(x => x);
+            }
+        }
         #endregion
 
         #region Writer
@@ -48,7 +70,7 @@ namespace Shares.Registry.Data.FileSystem.Databases
             {
                 await Task.Run(() =>
                 {
-                    string path = GetTablePath(nameof(AccessObjects.Share));
+                    string path = new AccessObjects.Share().GetTablePath(DatabasePath);
                     if (Directory.Exists(path)) Directory.Delete(path, true);
                 });
             }
@@ -57,7 +79,7 @@ namespace Shares.Registry.Data.FileSystem.Databases
                 await Task.WhenAll(
                     shares.Select(share => Task.Run(() => 
                     {
-                        string sharePath = GetCompanyPath(nameof(AccessObjects.Share), share.Name);
+                        string sharePath = mapper.Map<Share, AccessObjects.Share>(share).GetCompanyByDayPath(DatabasePath);
                         if (Directory.Exists(sharePath)) Directory.Delete(sharePath, true);
                     })
                 ));
@@ -70,7 +92,7 @@ namespace Shares.Registry.Data.FileSystem.Databases
                     AccessObjects.Share sharePurchaseDAO = mapper.Map<AccessObjects.Share>(sharePurchaseDTO);
                     return sharePurchaseDAO;
                 });
-            string tablePath = GetTablePath(nameof(AccessObjects.Share));
+            string tablePath = new AccessObjects.Share().GetTablePath(DatabasePath);
             IEnumerable<Task> tasks = dataAccessSharesPurchases.Select(dao => dao.WriteAsync(tablePath));
             await Task.WhenAll(tasks);
         }
@@ -86,8 +108,6 @@ namespace Shares.Registry.Data.FileSystem.Databases
             .Deserialize<Share>(file));
         private string[] GetFileNamesFromFolder(string folderPath) => Directory.GetFiles(folderPath, "*.json", SearchOption.AllDirectories);
 
-        private string GetTablePath(string tableName) => $"{DatabasePath}\\{tableName}";
-        private string GetCompanyPath(string tableName, string partitionKey) => $"{GetTablePath(tableName)}\\{partitionKey}";
         #endregion
     }
 }

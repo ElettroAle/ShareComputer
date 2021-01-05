@@ -8,6 +8,6 @@ namespace Shares.Registry.Business.Shares.Data.Enumerator
     public enum OperationType
     {
         Purchase,
-        Sell
+        Sale
     }
 }

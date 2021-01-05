@@ -1,6 +1,6 @@
 ﻿using Bogus;
 
-using Shares.Registry.Business.Abstractions.DataPlugins.TransferObjects;
+using Shares.Registry.Business.CapitalGain.Data.TransferObjects;
 using Shares.Registry.Business.Shares.Data.Enumerator;
 using Shares.Registry.Business.Shares.Data.Interfaces;
 
@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Shares.Registry.Data.Fake.Generators
 {
-    public class FakeSharePurchaseGenerator : ISharesDataReader
+    public class FakeSharesGenerator : ISharesDataReader
     {
         public async Task<IEnumerable<Share>> GetSharesAsync() => await Task.FromResult(CreateFakeDTOs());
 

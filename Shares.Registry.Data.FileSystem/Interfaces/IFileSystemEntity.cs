@@ -36,5 +36,8 @@ namespace Shares.Registry.Data.FileSystem.Interfaces
             string[] folderSegments = fileSystemEntity.PrimaryKey.Split(separators);
             return $"{folderSegments.Last()}.json";
         }
+
+        public static string GetTablePath(this IFileSystemEntity fileSystemEntity, string databasePath) 
+            => $"{databasePath}{Path.DirectorySeparatorChar}{fileSystemEntity.GetType().Name}";
     }
 }
