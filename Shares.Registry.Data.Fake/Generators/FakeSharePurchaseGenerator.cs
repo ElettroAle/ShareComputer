@@ -1,8 +1,8 @@
 ﻿using Bogus;
 
-using Shares.Registry.Business.Data.Enumerator;
-using Shares.Registry.Business.Data.Interfaces;
-using Shares.Registry.Business.Data.TransferObjects;
+using Shares.Registry.Business.Abstractions.DataPlugins.Enumerator;
+using Shares.Registry.Business.Abstractions.DataPlugins.Interfaces;
+using Shares.Registry.Business.Abstractions.DataPlugins.TransferObjects;
 
 using System;
 using System.Collections.Generic;
@@ -11,20 +11,24 @@ using System.Threading.Tasks;
 
 namespace Shares.Registry.Data.Fake.Generators
 {
-    public class FakeSharePurchaseGenerator : IDataReader
+    public class FakeSharePurchaseGenerator : ISharesDataReader
     {
-        public async Task<IEnumerable<SharePurchase>> GetAllSharesAsync() => await Task.FromResult(CreateFakeDTOs());
-        public async Task<IEnumerable<SharePurchase>> GetSharesAsync(string companyName) => await Task.FromResult(CreateFakeDTOs(companyNames: companyName));
+        public async Task<IEnumerable<Share>> GetSharesAsync() => await Task.FromResult(CreateFakeDTOs());
 
-        private IEnumerable<SharePurchase> CreateFakeDTOs(int numberOfItems = 0, params string[] companyNames) 
+        public async Task<IEnumerable<Share>> GetSharesAsync(string companyName, DateTime? from, DateTime? to) 
+            => await Task.FromResult(CreateFakeDTOs(from: from, to: to, companyNames: companyName));
+
+        private IEnumerable<Share> CreateFakeDTOs(int numberOfItems = 0, DateTime? from = null, DateTime? to = null, params string[] companyNames) 
         {
+            to ??= DateTime.Now;
+            from ??= to.Value.AddDays(-100);
             if (numberOfItems <= 0) numberOfItems = new Faker().Random.Int(10, 1000);
             if (companyNames == null || companyNames.Length <= 0) companyNames = GetCompanyNames();
-            return new Faker<SharePurchase>()
-                .RuleFor(dto => dto.Name, faker => companyNames[faker.Random.Int(0, companyNames.Length)])
+            return new Faker<Share>()
+                .RuleFor(dto => dto.Name, faker => companyNames[faker.Random.Int(0, companyNames.Length-1)])
                 .RuleFor(dto => dto.OperationType, faker => faker.PickRandom<OperationType>())
                 .RuleFor(dto => dto.Quantity, faker => faker.Random.Int(1, 500))
-                .RuleFor(dto => dto.Timestamp, faker => faker.Date.Between(DateTime.UtcNow.AddDays(-100), DateTime.UtcNow))
+                .RuleFor(dto => dto.Timestamp, faker => faker.Date.Between(from.Value, to.Value))
                 .RuleFor(dto => dto.UnitValue, faker => faker.Random.Decimal(0.1M, 100.0M))
             .Generate(numberOfItems);
         }

@@ -1,29 +1,38 @@
-﻿using Shares.Registry.Business.Data.Interfaces;
-using Shares.Registry.Business.Importer.Interfaces;
+﻿using Microsoft.Extensions.Logging;
+
+using Shares.Registry.Business.Abstractions.DataPlugins.Interfaces;
+using Shares.Registry.Business.Abstractions.DataPlugins.TransferObjects;
+using Shares.Registry.Business.Abstractions.Interfaces;
 
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shares.Registry.Business.Importer
+namespace Shares.Registry.Business.Shares
 {
     public class ImportService : IImportService
     {
-        private readonly IDataWriter dataWriter;
-        private readonly IDataReader dataReader;
+        private readonly ISharesDataWriter dataWriter;
+        private readonly ISharesDataReader dataReader;
+        private readonly ILogger logger;
 
-        public ImportService(IDataWriter dataWriter, IDataReader dataReader)
+        public ImportService(ISharesDataWriter dataWriter, ISharesDataReader dataReader, ILogger logger)
         {
             this.dataWriter = dataWriter;
             this.dataReader = dataReader;
+            this.logger = logger;
         }
-
-        public async Task ImportSharesAsync()
+        public async Task Clean() => await dataWriter.DeleteSharesAsync();
+        public async Task ImportAsync()
         {
-            await dataWriter.DeleteAllSharesAsync();
-            var shares = await dataReader.GetAllSharesAsync();
-            await dataWriter.SaveSharesAsync(shares);
+            await dataWriter.DeleteSharesAsync();
+            var shares = await dataReader.GetSharesAsync();
+            foreach (Share sharePurchase in shares)
+            {
+                logger.LogTrace($"{sharePurchase.Serialize()}");
+            }
+            await dataWriter.AddSharesAsync(shares);
         }
     }
 }

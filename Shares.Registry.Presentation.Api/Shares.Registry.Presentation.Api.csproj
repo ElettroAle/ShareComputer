@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -12,8 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Shares.Registry.Abstractions.App\Shares.Registry.Presentation.App.csproj" />
-    <ProjectReference Include="..\Shares.Registry.Business.Importer\Shares.Registry.Business.Importer.csproj" />
-    <ProjectReference Include="..\Shares.Registry.Business.Providers.Services\Shares.Registry.Business.Computer.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Business.Importer\Shares.Registry.Business.Shares.csproj" />
     <ProjectReference Include="..\Shares.Registry.Data.Fake\Shares.Registry.Data.Fake.csproj" />
     <ProjectReference Include="..\Shares.Registry.Data.FileSystem\Shares.Registry.Data.FileSystem.csproj" />
   </ItemGroup>

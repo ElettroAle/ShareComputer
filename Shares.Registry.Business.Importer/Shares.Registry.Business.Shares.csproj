@@ -10,7 +10,7 @@
   
   <ItemGroup>
     <ProjectReference Include="..\Shares.Registry.Business.Abstractions\Shares.Registry.Business.Abstractions.csproj" />
-    <ProjectReference Include="..\Shares.Registry.Business.Models\Shares.Registry.Business.Data.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Business.Models\Shares.Registry.Business.Abstractions.DataPlugins.csproj" />
   </ItemGroup>
 
 </Project>

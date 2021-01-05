@@ -1,31 +1,25 @@
 ﻿using AutoMapper;
 
-using Microsoft.Extensions.DependencyInjection;
-
-using Shares.Registry.Business.Data.Interfaces;
+using Shares.Registry.Business.Abstractions.DataPlugins.Interfaces;
 using Shares.Registry.Data.FileSystem.Databases;
 using Shares.Registry.Data.FileSystem.Mapping;
-
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceCollection
     {
-        public static IServiceCollection AddTextFileDatabase(this IServiceCollection services)
+        public static IServiceCollection AddTextFileDataAccessors(this IServiceCollection services)
             => services
-                .AddTextFileDatabaseWriter()
-                .AddTextFileDatabaseReader();
-        public static IServiceCollection AddTextFileDatabaseWriter(this IServiceCollection services)
-            => services
-                .AddTextFileDatabaseAutoMapper()
-                .AddSingleton<IDataWriter, TextFileDatabase>();
-        public static IServiceCollection AddTextFileDatabaseReader(this IServiceCollection services)
+                .AddTextFileDataWriter()
+                .AddTextFileDataReader();
+        public static IServiceCollection AddTextFileDataWriter(this IServiceCollection services)
             => services
                 .AddTextFileDatabaseAutoMapper()
-                .AddSingleton<IDataReader, TextFileDatabase>();
+                .AddSingleton<ISharesDataWriter, TextFileDatabaseProvider>();
+        public static IServiceCollection AddTextFileDataReader(this IServiceCollection services)
+            => services
+                .AddTextFileDatabaseAutoMapper()
+                .AddSingleton<ISharesDataReader, TextFileDatabaseProvider>();
 
         private static IServiceCollection AddTextFileDatabaseAutoMapper(this IServiceCollection services)
             => services

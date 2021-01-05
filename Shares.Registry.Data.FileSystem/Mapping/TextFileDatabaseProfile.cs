@@ -1,6 +1,8 @@
 ﻿
 using AutoMapper;
 
+using Shares.Registry.Business.Abstractions.DataPlugins.TransferObjects;
+
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,7 +13,7 @@ namespace Shares.Registry.Data.FileSystem.Mapping
     {
         public TextFileDatabaseProfile()
         {
-            this.CreateMap<Business.Data.TransferObjects.SharePurchase, AccessObjects.SharePurchase>();
+            this.CreateMap<Share, AccessObjects.Share>();
         }
     }
 }

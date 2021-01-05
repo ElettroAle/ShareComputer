@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-using Shares.Registry.Business.Computer.Interfaces;
+using Shares.Registry.Business.Abstractions.Interfaces;
 
 using System;
 using System.Collections.Generic;

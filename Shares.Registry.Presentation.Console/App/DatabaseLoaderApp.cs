@@ -1,12 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
 
-using Shares.Registry.Business.Data.Interfaces;
-using Shares.Registry.Business.Importer.Interfaces;
+using Shares.Registry.Business.Abstractions.Interfaces;
 using Shares.Registry.Presentation.App;
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Shares.Registry.Presentation.Console.App
@@ -14,13 +11,11 @@ namespace Shares.Registry.Presentation.Console.App
     public class DatabaseLoaderApp : IApp
     {
         private readonly IImportService importService;
-        private readonly IDataWriter dataWriter;
         private readonly ILogger logger;
 
-        public DatabaseLoaderApp(IImportService importService, IDataWriter dataWriter, ILogger logger)
+        public DatabaseLoaderApp(IImportService importService, ILogger logger)
         {
             this.importService = importService;
-            this.dataWriter = dataWriter;
             this.logger = logger;
         }
 
@@ -30,12 +25,12 @@ namespace Shares.Registry.Presentation.Console.App
             if (System.Console.ReadKey().Key != ConsoleKey.D)
             {
                 logger.LogDebug("\nPopulating database using random objects");
-                await importService.ImportSharesAsync();
+                await importService.ImportAsync();
             }
             else 
             {
                 logger.LogDebug("\nDeleting all database entries");
-                await dataWriter.DeleteAllSharesAsync();
+                await importService.Clean();
             }
             logger.LogDebug("Done");
         }

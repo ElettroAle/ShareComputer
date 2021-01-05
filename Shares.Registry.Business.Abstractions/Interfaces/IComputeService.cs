@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shares.Registry.Business.Computer.Interfaces
+namespace Shares.Registry.Business.Abstractions.Interfaces
 {
     public interface IComputeService
     {
-        Task<double> ComputeAsync();
+        Task<string> ComputeAsync();
     }
 }
