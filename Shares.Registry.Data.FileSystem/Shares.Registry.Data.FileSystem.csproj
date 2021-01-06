@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shares.Registry.Business.Shares\Shares.Registry.Business.CapitalGain.csproj" />
+    <ProjectReference Include="..\Shares.Registry.Business.CapitalGain\Shares.Registry.Business.CapitalGain.csproj" />
     <ProjectReference Include="..\Shares.Registry.Business.Tenant\Shares.Registry.Business.Tenant.csproj" />
   </ItemGroup>
 

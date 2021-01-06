@@ -33,7 +33,8 @@ namespace Shares.Registry.Business.CapitalGain
                 IEnumerable<Share> purchases = (await sharesDataReader.GetSharesAsync(saleGroup.Key, from, to)).Where(x => x.OperationType == OperationType.Purchase);
                 while (saleGroup.Count() < purchases.Count() || from.Year <= 2018) 
                 {
-                    await sharesDataReader.GetSharesAsync(from, to);
+                    // TODO: aggiungere gli acquisti fino a pareggiare le vendite
+                    //await sharesDataReader.GetSharesAsync(from, to);
                 }
                 if (saleGroup.Count() < purchases.Count())
                 {
